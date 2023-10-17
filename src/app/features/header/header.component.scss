@@ -85,6 +85,10 @@
                     display: flex;
                     justify-content: space-around;
                     cursor: pointer;
+                    .nav-li {
+                        color: #000000;
+                        text-decoration: none;
+                    }
                 }
             }
             .nav-line {
