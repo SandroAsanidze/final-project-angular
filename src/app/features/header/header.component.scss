@@ -1,0 +1,113 @@
+
+.header {
+    display: flex;
+    .logo-div {
+        width: 290px;
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 150px;
+        .the-date {
+            display: flex;
+            justify-content: space-between;
+            .the {
+                width: 64px;
+                height: 17px;
+                background-color: #000000;
+                color: #FFFFFF;
+                font-size: 15px;
+                letter-spacing: 12px;
+            }
+            .date {
+                width: 165px;
+                height: 17px;
+                background-color: #F22929;
+                color: #FFFFFF;
+                font-size: 15px;
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+        .news-portal {
+            margin-top: 0;
+            font-size: 47px;
+            color: #000000;
+            cursor: pointer;
+            span {
+                color: #F22929;
+            }
+        }
+    }
+    .line {
+        width: 1px;
+        height: 78px;
+        margin-left: 15px;
+        // margin-right: 15px;
+        background-color: #000000;
+    }
+    .header-div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .above-line {
+            width: 100%;
+            height: 1px;
+            background-color: #757373;
+        }
+        .social-media {
+            width: 100%;
+            height: 27px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            h3 {
+                font-size: 11px;
+                margin-left: 10px;
+            }
+            .fb {
+                color: blue;
+            }
+            .yt {
+                color: red;
+            }
+            .inst {
+                color: rgb(255, 102, 0);
+            }
+        }
+        .nav-login {
+            display: flex;
+            width: 100%;
+            .navigation {
+                width: 80%;
+                .nav-ul {
+                    list-style: none;
+                    display: flex;
+                    justify-content: space-around;
+                    cursor: pointer;
+                }
+            }
+            .nav-line {
+                width: 1px;
+                height: 100%;
+                background-color: #757373;
+            }
+            .login {
+                width: 20%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .login-svg {
+                    width: 20px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+.under-line {
+    width: 100%;
+    height: 1px;
+    background-color: #757373;
+}
+    
