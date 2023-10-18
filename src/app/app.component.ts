@@ -15,4 +15,5 @@ import { FooterComponent } from './features/footer/footer.component';
 })
 export class AppComponent {
   title = 'angular-project';
+
 }

@@ -1,4 +1,8 @@
 {
+    "information": {
+        "email":"wrek.yamom@gmail.com",
+        "password":"123456789"
+    },
     "technics":[
             {
                 "source":{"id":1,"name":"Lifehacker.com"},

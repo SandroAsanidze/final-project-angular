@@ -1,0 +1,45 @@
+.form-div {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 300px;
+        padding: 20px;
+        border: 1px solid black;
+        border-radius: 8px;
+        .admin {
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        .label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .input {
+                width: 90%;
+                outline: none;
+                border-top: black;
+                margin-bottom: 50px;
+            }
+        }
+        .btn {
+            width: 50%;
+            padding: 5px;
+            margin: 0 auto;
+            margin-bottom: 15px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            font-size: 15px;
+            cursor: pointer;
+            &:disabled {
+                background-color: #ccc;
+                cursor:no-drop;
+            }
+        }
+    }
+}

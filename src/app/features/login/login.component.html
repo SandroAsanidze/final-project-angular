@@ -1,0 +1,14 @@
+<div class="form-div">
+    <form [formGroup]="loginForm" class="form" (submit)="Submit()">
+        <h2 class="admin">ADMIN</h2>
+        <label class="label">
+            Email:
+            <input class="input" type="text" name="email" formControlName="email">
+        </label>
+        <label class="label">
+            Password:
+            <input class="input" type="password" name="password" formControlName="password">
+        </label>
+        <button class="btn" [disabled]="isAdmin()" type="submit">Login</button>
+    </form>
+</div>
