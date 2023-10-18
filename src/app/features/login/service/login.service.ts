@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 interface AdminInfo {
   email:string,
-  password:number
+  password:string
 }
 
 @Injectable({

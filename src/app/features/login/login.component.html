@@ -9,6 +9,7 @@
             Password:
             <input class="input" type="password" name="password" formControlName="password">
         </label>
-        <button class="btn" [disabled]="isAdmin()" type="submit">Login</button>
+        <div class="warning" *ngIf="warningMessage">{{ warningMessage }}</div>
+        <button class="btn" [disabled]="loginForm.invalid" type="submit">Login</button>
     </form>
 </div>

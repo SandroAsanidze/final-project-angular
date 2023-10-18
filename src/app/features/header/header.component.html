@@ -33,14 +33,15 @@
                     <li>
                         <a routerLinkActive="" class="nav-li" routerLink="weather">Weather</a>
                     </li>
-                    <li>
+                    <li [hidden]="!Admin()">
                         <a routerLinkActive="" class="nav-li" routerLink="add-news">Add</a>
                     </li>
                 </ul>
             </nav>
             <div class="nav-line"></div>
             <div class="login">
-                <img routerLink="login" class="login-svg" src="../../../assets/user-solid.svg" alt="login-svg">
+                <img [hidden]="Admin()" routerLink="login" class="login-svg" src="../../../assets/user-solid.svg" alt="login-svg">
+                <p [hidden]="!Admin()" (click)="logOut()">Log Out</p>
             </div>
         </div>
     </div>
