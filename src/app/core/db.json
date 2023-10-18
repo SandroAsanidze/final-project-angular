@@ -172,7 +172,188 @@
                 "author":"Alex Cranz",
                 "title":"Crunchyroll is in the news today, but not for the reason it needs to be",
                 "description":"Crunchyroll and its parent company, Sony, recently settled a class action lawsuit and launched a new FAST channel. But what it really needs to do is fix its Apple TV app.",
-                "url":"https://www.theverge.com/2023/10/11/23913236/crunchyroll-sony-class-action-settlement-fast-anime","urlToImage":"https://cdn.vox-cdn.com/thumbor/hf9C_fDpmSicsGv1OZxR9XUuyew=/0x0:2040x1360/1200x628/filters:focal(725x853:726x854)/cdn.vox-cdn.com/uploads/chorus_asset/file/13563193/setienne_170816_2994_0041.jpg","publishedAt":"2023-10-11T23:07:00Z",
+                "url":"https://www.theverge.com/2023/10/11/23913236/crunchyroll-sony-class-action-settlement-fast-anime",
+                "urlToImage":"https://cdn.vox-cdn.com/thumbor/hf9C_fDpmSicsGv1OZxR9XUuyew=/0x0:2040x1360/1200x628/filters:focal(725x853:726x854)/cdn.vox-cdn.com/uploads/chorus_asset/file/13563193/setienne_170816_2994_0041.jpg","publishedAt":"2023-10-11T23:07:00Z",
                 "content":"Crunchyroll is in the news today, but not for the reason it needs to be\r\nCrunchyroll is in the news today, but not for the reason it needs to be\r\n / Crunchyroll is the streaming choice you need if yo… [+3814 chars]"}
+    ],
+    "sports":[
+        {
+            "id":1,
+            "title":"Top eight United Rugby Championship teams to qualify for Champions Cup",
+            "description":"Shifting from a representative approach following the Covid-19 pandemic, the United Rugby Championship (URC), which starts this weekend, will introduce a full meritocracy this season to turn up the intrigue and competitiveness in European rugby.The Lions host last season's runners-up, the Stormers (Saturday, 16:05), the Sharks are away to defending champions Munster (Saturday, 18:15), and the Bulls host Welsh outfit Scarlets (Sunday, 15:00).",
+            "urlToImage":"https://cdn.24.co.za/files/Cms/General/d/9597/a1aa976e85584192a9a8a28d1088ba10.jpg",
+            "content":"The top eight teams in the URC will qualify for EPCR's Champions Cup, with the remaining teams in the league earning a place in the Challenge Cup."
+        },
+        {
+            "id":2,
+            "title":"Cricket returns to the Olympics after 128 years",
+            "description":"Cricket will feature as one of five new sports at the 2028 Olympic Games in Los Angeles. A vote of the International Olympic Committee's session in Mumbai on Monday, October 16, approved the inclusion of the game's Twenty20 format, together with baseball/softball, flag football, squash and lacrosse.The IOC's executive board last week accepted a proposal by LA organizers for the five sports to be included. But the final choice still had to be voted on Monday at the IOC session in Mumbai, one of the global centers for cricket, as India hosts the men's 50-over Cricket World Cup. Only two delegates at the session voted against the new sports.",
+            "urlToImage":"https://img.lemde.fr/2023/10/16/0/0/7747/5165/556/0/75/0/33b4b3a_5596584-01-06.jpg",
+            "content":"Cricket"
+        },
+        {
+            "id":3,
+            "title":"New Zealand wins epic Rugby World Cup quarterfinal against Ireland",
+            "description":"New Zealand withstood three comebacks from top-ranked Ireland and two yellow cards to win a gripping Rugby World Cup quarterfinal 28-24 on Saturday, October 14, and stay on course for a record fourth title. The All Blacks come back to Stade de France (in Saint-Denis, just outside of Paris) to meet Argentina next Friday, after the Pumas rallied to beat Wales 29-17 in Marseille earlier.",
+            "urlToImage":"https://img.lemde.fr/2023/10/14/0/0/7565/5043/556/0/75/0/6ef8215_8464d3d89dc740a989a6dd364cd00fa2-0-2d06a8653892455dab20f30c2326a21e.jpg",
+            "content":"Rugby"
+        },
+        {
+            "id":4,
+            "title":"Paris Olympics 2024: Basketball legend Joel Embiid opts to play for US not France",
+            "description":"Reigning NBA Most Valuable Player Joel Embiid said on Thursday, October 5, that he has pledged to play for the United States at next year's Paris Olympics. Embiid was also eligible to play international basketball for Cameroon and France but has instead opted to join what is expected to be a star-studded Olympic squad. ESPN reported that the Yaounde-born Embiid confirmed his decision early on Thursday to Team USA executive director Grant Hill.",
+            "urlToImage":"https://img.lemde.fr/2023/10/05/0/0/5616/3744/556/0/75/0/1410bca_d2f2d9483b494fcda1aafeefb3de2383-0-4883487d8f3042129e1a601f12cd1fc6.jpg",
+            "content":"Basketball Olympics 2024"
+        },
+        {
+            "id":5,
+            "title":"Max Verstappen crowned Formula One world champion for 3rd straight season, his 'best one' so far",
+            "description":"Max Verstappen believes his third Formula One title is his best yet. Clinching the championship in a sprint race on Saturday, October 7, in Qatar didn't pack the emotional impact of his dramatic, controversial last-lap overtake of Lewis Hamilton for the 2021 title. Still, the Red Bull driver thinks his relentlessly consistent 2023 season has been his greatest so far. This one is the best one, Verstappen said.I think the first one was the most emotional one because that's when your dreams are fulfilled in F1. But this one definitely in my opinion has been my best year also for consecutive wins and stuff. The car itself has been probably in the best shape as well. This one is probably (the one) I'm most proud of in a way because of consistency.",
+            "urlToImage":"https://img.lemde.fr/2023/10/07/0/0/4500/3000/556/0/75/0/35f0e56_5506208-01-06.jpg",
+            "content":"Basketball Olympics 2024"
+        },
+        {
+            "id":6,
+            "title":"F1 Academy: Bianca Bustamante to represent McLaren in all-female series in 2024",
+            "description":"Bianca Bustamante has become the first female driver to enrol in the McLaren Driver Development programme. Bustamante will also represent McLaren by running the team's livery on her F1 Academy race car for the 2024 season. The 18-year-old Filipino is a promising female talent in motorsport, having been involved in racing since the age of five, winning multiple karting championships across Asia.",
+            "urlToImage":"https://e1.365dm.com/23/10/768x432/skysports-bianca-bustamante_6325794.png?20231018134430",
+            "content":"F1 Academy"
+        },
+        {
+            "id":7,
+            "title":"Talatau Amone found guilty of assault with hammer",
+            "description":"Stand-off Amone, 21, was charged with destroying property, assault occasioning actual bodily harm in the company of others and intimidation. he was found guilty of three offences after a two-day hearing in Wollongong in New South Wales. Amone's lawyer, Elias Tabchouri, said the matter was a case of mistaken identity and is 'far from over'.",
+            "urlToImage":"https://ichef.bbci.co.uk/onesport/cps/976/cpsprodpb/6EA6/production/_131462382_gettyimages-1654552003.jpg",
+            "content":"Talatau Amone"
+        },
+        {
+            "id":8,
+            "title":"Tommy Fury beats KSI in cruiserweight contest",
+            "description":"The bout was not licensed by the British Boxing Board of Control which governs the sport in the United Kingdom, as KSI does not hold a professional boxing licence in the UK. In a six-round cruiserweight contest, both men showed their limitations with constant grappling and failed to land anything of real note as Fury, 24, edged a majority decision.",
+            "urlToImage":"https://ichef.bbci.co.uk/onesport/cps/976/cpsprodpb/1827F/production/_131434989_6fed1be44820dd7a720317c22eb66c9e26e2cb62.jpg",
+            "content":"KSI"
+        },
+        {
+            "id":9,
+            "title":"The million-dollar hustle changing US sport - how college football athletes are cashing in",
+            "description":"College football in the US is big business. The sport, which kicked off its new season last weekend, is awash with money. he 65 universities in the top five athletic conferences generated a combined total of more than $3.3bn (£2.6bn) in revenue from their American football programmes alone last year. Starting next season, the 18 universities in the Big Ten Conference - traditionally one of the strongest and most prestigious college gridiron competitions in the country - will share more than $1bn a year (£792m) in television broadcasting money.",
+            "urlToImage":"https://ichef.bbci.co.uk/onesport/cps/976/cpsprodpb/68F4/production/_130986862_tritonlawrence.jpg",
+            "content":"changing US sport"
+        },
+        {
+            "id":10,
+            "title":"One win, 17,000 defeats - life as a Washington General",
+            "description":"On 5 January 1971, Louis Herman Klotz did something that no basketballer has dared repeat. In front of a disbelieving audience in the city of Martin, Tennessee, the man known as Red broke one of the most sacred unwritten rules in sport. As player-coach for the Washington Generals, Klotz shot the winning basket against the Harlem Globetrotters. Everybody knows the Generals aren't supposed to beat the Globetrotters.",
+            "urlToImage":"https://ichef.bbci.co.uk/onesport/cps/976/cpsprodpb/1748C/production/_130827359_maddox_getty.jpg",
+            "content":"Washington General"
+        },
+        {
+            "id":11,
+            "title":"Tour de France: Biniam Girmay is leading a revolution in cycling",
+            "description":"Under a stifling hot Swiss sun, Biniam Girmay rests his forearms on his handlebars, his muscular right leg out at an angle to stabilise himself as he gives pre-race interviews. He's no different to any other rider cruising slowly through the gauntlet of microphones on bikes worth around £15,000 - like thoroughbreds on parade. Girmay's real distinction though is as one of the finest talents in the sport. Last year he made history as the first black African to win a one-day cobbled classic - in Gent-Wevelgem - and a stage of cycling's second biggest Grand Tour race - the Giro d'Italia.",
+            "urlToImage":"https://ichef.bbci.co.uk/onesport/cps/976/cpsprodpb/5F07/production/_130372342_tourdesuisse.jpg",
+            "content":"Tour de France"
+        },
+        {
+            "id":12,
+            "title":"Women's World Cup 2023: Australia's accidental icon - how Sam Kerr became the face of a nation",
+            "description":"A 12-year-old Sam Kerr didn't know it at the time, but she was about to make a choice that would change football. She had been playing Australian rules football. And loving it. Her brother Daniel, 10 years older, was the star of Perth's West Coast Eagles. But her days with the oval ball were numbered. As the boys she played alongside got bigger, the action got more physical. She would come back from matches with black eyes or a swollen nose.",
+            "urlToImage":"https://ichef.bbci.co.uk/onesport/cps/976/cpsprodpb/1214A/production/_130385047_kerr_parents.jpg",
+            "content":"Women's World Cup 2023"
+        },
+        {
+            "id":13,
+            "title":"England 3-1 Italy: Gareth Southgate says more to come from England",
+            "description":"Once again England make qualifying for a major tournament look easy. Gareth Southgate's side came from a goal down to beat Italy 3-1 on Tuesday and secure their place at Euro 2024 in Germany with two games to spare.  They are so far unbeaten in a qualifying campaign that - on paper - was not easy. They were drawn with the defending European champions Italy as well as Ukraine, North Macedonia and Malta, but in the end they made it look easy with five wins, one draw and no losses",
+            "urlToImage":"https://ichef.bbci.co.uk/onesport/cps/976/cpsprodpb/10CBB/production/_131459786_england.jpg",
+            "content":"Football"
+        },
+        {
+            "id":14,
+            "title":"Sandro Tonali: Newcastle confirm midfielder is being investigated over alleged betting activity",
+            "description":"Newcastle United have confirmed midfielder Sandro Tonali is being investigated by the Italian Prosecutor's Office and the Italian football federation in relation to alleged illegal betting activity. The 23-year-old was recently withdrawn from Italy's training camp. Newcastle say Tonali is co-operating with the enquiry",
+            "urlToImage":"https://ichef.bbci.co.uk/onesport/cps/976/cpsprodpb/07AE/production/_131466910_sandrotonali.jpg",
+            "content":"Sandro Tonali"
+        },
+        {
+            "id":15,
+            "title":"Lucy Charles-Barclay on winning Ironman World Championship in Kona",
+            "description":"'I've always felt like the bridesmaid at the World Championship.' As Britain's Lucy Charles-Barclay crossed the line in Hawaii to become Ironman world champion on Sunday, her days as a runner-up were finally over. 'It was definitely all worth it,' Charles-Barclay tells BBC Sport. 'Running up to that finish line, I've done it five times and four times before I was in second place, so I didn't get to grab that tape.'This time I was running up to the line and I didn't even slow down. All I was focusing on was getting that tape, and it was amazing to do it.'It really does feel like I've almost dedicated my career to try and win this race.'",
+            "urlToImage":"https://ichef.bbci.co.uk/onesport/cps/976/cpsprodpb/8BE7/production/_131451853_lucy3.jpg",
+            "content":"Lucy Charles-Barclay"
+        }
+
+    ],
+    "world":[
+        {
+            "id":1,
+            "title":"NASA's Latest Mission Uncovers Water Ice on Distant Moon",
+            "description":"Scientists make an exciting discovery of water ice on a moon in our solar system, hinting at potential future exploration.",
+            "urlToImage":"https://www.ecowatch.com/wp-content/uploads/2021/10/980229968-origin.jpg",
+            "content":"NASA"
+        },
+        {
+            "id":2,
+            "title":"COVID-19 Vaccine Breakthroughs",
+            "description":"New vaccines and treatments show promise in the ongoing battle against the coronavirus, offering hope for a post-pandemic world.",
+            "urlToImage":"https://image.cnbcfm.com/api/v1/image/106805949-1607021583002-Woman_with_face_mask_getting_vaccinated_2.jpg?v=1607021650",
+            "content":"Covid-19"
+        },
+        {
+            "id":3,
+            "title":"Rare White Rhino Birth Offers Hope for Endangered Species",
+            "description":"A critically endangered white rhinoceros gives birth, raising optimism for the conservation of this species.",
+            "urlToImage":"https://media-cldnry.s-nbcnews.com/image/upload/t_social_share_1024x768_scale,f_auto,q_auto:best/newscms/2019_31/2952821/190730-rhino-calf-san-diego-cs-414p.jpg",
+            "content":"White Rhino"
+        },
+        {
+            "id":4,
+            "title":"Astronomers Detect Mysterious Cosmic Phenomenon",
+            "description":"Scientists observe an enigmatic cosmic event, puzzling astronomers and prompting further research.",
+            "urlToImage":"https://cosmicdawn.dk/wp-content/uploads/2022/12/GRB211211Apt-lo-scaled.jpg",
+            "content":"Mysterious Cosmic Phenomenon"
+        },
+        {
+            "id":5,
+            "title":"Tech Giants Face Antitrust Scrutiny",
+            "description":"Major tech companies, including Facebook, Google, and Amazon, are under increased regulatory scrutiny for potential antitrust violations.",
+            "urlToImage":"https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2021/06/big-tech-antitrust.jpeg",
+            "content":"Tech Giants"
+        },
+        {
+            "id":6,
+            "title":"Myanmar Human Rights Crisis",
+            "description":"Myanmar faces ongoing human rights abuses and instability, with international condemnation and efforts to restore democracy.",
+            "urlToImage":"https://www.amnesty.org/en/wp-content/uploads/2022/05/284021-scaled.jpg",
+            "content":"Human"
+        },
+        {
+            "id":7,
+            "title":"Blockbuster Film Tops Box Office",
+            "description":"The latest Hollywood blockbuster, “Galactic Odyssey,” has dominated the box office, drawing crowds with its stunning visuals and gripping storyline.",
+            "urlToImage":"https://www.visualcapitalist.com/wp-content/uploads/2021/05/Top-50-Box-Offices-SHARE-10.jpg",
+            "content":"Blockbuster"
+        },
+        {
+            "id":8,
+            "title":"African Nations Accelerate Economic Growth",
+            "description":"Several African countries experience robust economic growth and development, attracting increased investments and opportunities.",
+            "urlToImage":"https://storage.unctad.org/2022-edar_report/assets/img/graphs/EDAR-2022-Most_African_countries_are_highly_dependent_on_commodities.png",
+            "content":"Africa"
+        },
+        {
+            "id":9,
+            "title":"Renewable Energy Revolution",
+            "description":"Countries worldwide invest in renewable energy sources, aiming to reduce carbon emissions and transition to a more sustainable future.",
+            "urlToImage":"https://thebulletin.org/wp-content/uploads/2022/05/iStock-543084848.jpg",
+            "content":"Revolution"
+        },
+        {
+            "id":10,
+            "title":"Breakthrough in Quantum Computing",
+            "description":"Scientists have made a significant advancement in quantum computing, bringing us closer to solving complex problems that were once considered unsolvable.",
+            "urlToImage":"https://scitechdaily.com/images/Abstract-Quantum-Physics-Alien-Technology-Illustration.jpg",
+            "content":"Quantum Computing"
+        }
     ]
 }

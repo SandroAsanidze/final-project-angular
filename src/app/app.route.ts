@@ -1,4 +1,5 @@
 import { Route } from "@angular/router";
+import { authGuard, authGuard1 } from "./core/guards/auth.guard";
 
 export const ROUTE:Route[] = [
     {
@@ -6,10 +7,10 @@ export const ROUTE:Route[] = [
         redirectTo:"home",
         pathMatch:"full"
     },
-    // {
-    //     path:'home',
-    //     loadComponent: () => import('./features/home/').then(c => c.HomeComponent)
-    // },
+    {
+        path:'home',
+        loadComponent: () => import('./features/home/home.component').then(c => c.HomeComponent)
+    },
     {
         path:'world',
         loadComponent: () => import('./features/world-news/world-news.component').then(c => c.WorldNewsComponent)
@@ -28,10 +29,12 @@ export const ROUTE:Route[] = [
     },
     {
         path:'login',
-        loadComponent: () => import('./features/login/login.component').then(c => c.LoginComponent)
+        loadComponent: () => import('./features/login/login.component').then(c => c.LoginComponent),
+        canActivate:[authGuard1]
     },
     {
         path:'add-news',
-        loadComponent: () => import('./features/add-news/add-news.component').then(c => c.AddNewsComponent)
+        loadComponent: () => import('./features/add-news/add-news.component').then(c => c.AddNewsComponent),
+        canActivate:[authGuard]
     },
 ];

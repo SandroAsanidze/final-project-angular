@@ -1,15 +1,13 @@
 <div class="articles">
-    <div class="article" *ngFor="let article of onePageData()">
+  <div class="article" *ngFor="let article of onePageData()">
         <img class="article-img" [src]="article.urlToImage" alt="{{ article.title }}">
         <h3>{{ article.title}}</h3>
         <p>{{ article.description | slice: 0 : 100 }}...</p>
         <p>Published at: {{ article.publishedAt |date:'longDate' }}</p>
-    </div>
   </div>
-  <div>
-    <ul class="pagination">
-      <ul class="pagination" *ngFor="let page of pageNumbers">
-        <li><a style="cursor: pointer;" (click)="currentPage = page" [class.active]="currentPage === page" (click)="scrollToTop()">{{page}}</a></li>
-      </ul>
-    </ul>
-  </div>
+</div>
+<div class="pagination-div">
+  <ul class="pagination" *ngFor="let page of pageNumbers">
+    <li><a style="cursor: pointer;" (click)="currentPage = page" [class.active]="currentPage === page" (click)="scrollToTop()">{{page}}</a></li>
+  </ul>
+</div>
