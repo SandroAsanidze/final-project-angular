@@ -1,13 +1,13 @@
 import { ChangeDetectionStrategy, Component,OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
-// import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import { AuthService } from 'src/app/core/services/auth.service';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule,RouterModule],
+  imports: [CommonModule,RouterModule,LoginComponent],
   providers:[AuthService],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit{
   ngOnInit() {
     this.Admin();
   }
-  
+
   Admin() {
     if(localStorage.getItem('isAdmin') === 'true') {
       return true;

@@ -2,7 +2,7 @@
     <div class="article" *ngFor="let world of onePageData()">
         <img class="article-img" [src]="world.urlToImage" alt="{{ world.title }}">
         <h3>{{ world.title}}</h3>
-        <p>{{ world.description | slice: 0 : 150 }}...</p>
+        <p>{{ world.description | slice: 0 : 50 }}...</p>
     </div>
 </div>
 <div class="pagination-div">
