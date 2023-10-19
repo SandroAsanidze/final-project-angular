@@ -14,7 +14,7 @@ import { LoginComponent } from '../login/login.component';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent implements OnInit{
-  constructor(public auth:AuthService,private router:Router){}
+  constructor(private router:Router){}
   ngOnInit() {
     this.Admin();
   }
@@ -31,7 +31,7 @@ export class HeaderComponent implements OnInit{
   logOut() {
     const confirmation = confirm('Are you sure you want to exit ADMIN mode?');
     if (confirmation) {
-      this.router.navigate(['technic'])
+      this.router.navigate(['home'])
       localStorage.removeItem('isAdmin');
     }
   }

@@ -5,6 +5,7 @@
         <h3>{{ article.title}}</h3>
         <p>{{ article.description | slice: 0 : 100 }}...</p>
         <p>Published at: {{ article.publishedAt |date:'longDate' }}</p>
+        <button *ngIf="isAdminTrue()" (click)="deleteNews(article.id)">Delete</button>
   </div>
 </div>
 <div class="pagination-div">

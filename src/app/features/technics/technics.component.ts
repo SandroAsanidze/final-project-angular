@@ -64,4 +64,23 @@ export class TechnicsComponent {
   scrollToTop() {
     window.scroll({ top: 0, left: 0, behavior: 'smooth' });
   }
+
+  isAdminTrue() {
+    if(localStorage.getItem('isAdmin') === 'true') {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
+
+  public deleteNews(id:number) {
+    this.technicsService.deleteSingleTechnicNews(id).subscribe();
+
+    const index = this.articles.findIndex(article => article.id === id);
+    if (index !== -1) {
+      this.articles.splice(index, 1);
+    }
+  };
 }

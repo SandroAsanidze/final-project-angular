@@ -64,4 +64,23 @@ export class SportsComponent implements OnInit {
   scrollToTop() {
     window.scroll({ top: 0, left: 0, behavior: 'smooth' });
   }
+
+  isAdminTrue() {
+    if(localStorage.getItem('isAdmin') === 'true') {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
+
+  public deleteNews(id:number) {
+    this.sportService.deleteSingleNews(id).subscribe();
+
+    const index = this.sports.findIndex(sport => sport.id === id);
+    if (index !== -1) {
+      this.sports.splice(index, 1);
+    }
+  };
 }

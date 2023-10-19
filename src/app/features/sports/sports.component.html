@@ -4,6 +4,7 @@
         <img class="article-img" [src]="sport.urlToImage" alt="{{ sport.title }}">
         <h3>{{ sport.title}}</h3>
         <p>{{ sport.description | slice: 0 : 150 }}...</p>
+        <button *ngIf="isAdminTrue()" (click)="deleteNews(sport.id)">Delete</button>
     </div>
 </div>
 <div class="pagination-div">

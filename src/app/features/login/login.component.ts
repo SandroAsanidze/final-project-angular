@@ -16,7 +16,7 @@ import { AuthService } from 'src/app/core/services/auth.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LoginComponent implements OnInit {
-  constructor(private router:Router,private formBuilder:FormBuilder, public loginService:LoginService,public auth:AuthService){}
+  constructor(private router:Router,private formBuilder:FormBuilder, public loginService:LoginService){}
   ngOnInit(): void {
     this.getEmail();
     this.getPassword();

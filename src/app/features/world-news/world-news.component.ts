@@ -64,4 +64,23 @@ export class WorldNewsComponent implements OnInit {
   scrollToTop() {
     window.scroll({ top: 0, left: 0, behavior: 'smooth' });
   }
+
+  isAdminTrue() {
+    if(localStorage.getItem('isAdmin') === 'true') {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
+
+  public deleteNews(id:number) {
+    this.worldService.deleteSingleWorldNews(id).subscribe();
+
+    const index = this.worldNews.findIndex(news => news.id === id);
+    if (index !== -1) {
+      this.worldNews.splice(index, 1);
+    }
+  };
 }
