@@ -28,9 +28,9 @@
           <input type="text" name="content" formControlName="content">
         </label>
       
-        <div style="display: flex;">
+        <div class="buttons">
           <button [disabled]="loginForm.invalid" class="add-btn">ADD</button>
-          <button type="button" (click)="resetForm()">Reset</button>
+          <button type="button" (click)="resetForm()" class="reset-btn">Reset</button>
         </div>
     </form>
 </div>

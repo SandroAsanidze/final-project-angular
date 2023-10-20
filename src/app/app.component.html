@@ -1,6 +1,6 @@
 <app-header></app-header>
-<div class="main">
-    <app-main-news></app-main-news>
+<div class="main" [ngStyle]="{'display': hideMainNews ? 'flex' : 'block'}">
+    <app-main-news *ngIf="hideMainNews"></app-main-news>
     <router-outlet></router-outlet>
 </div>
 <app-footer></app-footer>
