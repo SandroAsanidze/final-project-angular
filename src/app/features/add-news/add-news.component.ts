@@ -3,10 +3,17 @@ import { CommonModule } from '@angular/common';
 import { SportsService } from '../sports/service/sports.service';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { Technics, TechnicsService } from '../technics/service/technics.service';
+import { TechnicsService } from '../technics/service/technics.service';
 import { WorlNewsService, World, WorldNews } from '../world-news/service/world-news.service';
 
 export interface Sport {
+  title: string;
+  description: string;
+  urlToImage: string;
+  content: string;
+}
+
+export interface CommonInterface {
   title: string;
   description: string;
   urlToImage: string;
@@ -28,51 +35,12 @@ export class AddNewsComponent {
     private technicsService:TechnicsService,
     private formBuilder:FormBuilder){}
 
-  //Sports
-  sportsSubmit(){
-    const formData:Sport = { 
-      title: this.loginForm.get('title')?.value || '',
-      description: this.loginForm.get('description')?.value || '',
-      urlToImage: this.loginForm.get('urlToImage')?.value || '',
-      content: this.loginForm.get('content')?.value || ''
-    };
-    this.addSportsNews(formData);
-
-    this.loginForm.reset();
-  }
-
   public addSportsNews(news:Sport) {
     this.sportsService.addNews(news).subscribe();
   }
 
-  //Technics
-  technicsSubmit(){
-    const formData:Technics = { 
-      title: this.loginForm.get('title')?.value || '',
-      description: this.loginForm.get('description')?.value || '',
-      urlToImage: this.loginForm.get('urlToImage')?.value || '',
-      content: this.loginForm.get('content')?.value || ''
-    };
-    this.addTechnicsNews(formData);
-
-    this.loginForm.reset();
-  }
-
   public addTechnicsNews(news:Sport) {
     this.technicsService.addTechnicNews(news).subscribe();
-  }
-
-  //Worlds
-  worldsSubmit(){
-    const formData:World = { 
-      title: this.loginForm.get('title')?.value || '',
-      description: this.loginForm.get('description')?.value || '',
-      urlToImage: this.loginForm.get('urlToImage')?.value || '',
-      content: this.loginForm.get('content')?.value || ''
-    };
-    this.addWorldsNews(formData);
-
-    this.loginForm.reset();
   }
 
   public addWorldsNews(news:World) {
@@ -80,28 +48,36 @@ export class AddNewsComponent {
   }
 
   public loginForm = this.formBuilder.group({
+    category:['sports',Validators.required],
     title:['',Validators.required],
     description:['',Validators.required],
-    urlToImage:['',Validators.required],
+    urlToImage:['',[Validators.required,Validators.pattern(/https?:\/\/\S+\.(?:jpg|jpeg|png|gif|bmp|svg|webp)/i)]],
     content:['',Validators.required],
   });
 
-
-  showSport:boolean = false;
-  showTechnics:boolean = false;
-  showWorld:boolean = false;
-
-  showSportBtn() {
-    this.showSport = !this.showSport;
+  resetForm() {
+    this.loginForm.reset();
   }
 
-  showTechnicsBtn() {
-    this.showTechnics = !this.showTechnics;
+  onSubmit() {
+    const category = this.loginForm.get('category')?.value;
+    const formData:CommonInterface = { 
+      title: this.loginForm.get('title')?.value || '',
+      description: this.loginForm.get('description')?.value || '',
+      urlToImage: this.loginForm.get('urlToImage')?.value || '',
+      content: this.loginForm.get('content')?.value || ''
+    };
+
+    if(category === 'sports') {
+      this.addSportsNews(formData);
+    }
+    else if (category === 'worlds') {
+      this.addWorldsNews(formData);
+    }
+    else {
+      this.addTechnicsNews(formData);
+    }
+
+    this.loginForm.reset();
   }
-
-  showWorldBtn() {
-    this.showWorld = !this.showWorld;
-  }
-
-
 }

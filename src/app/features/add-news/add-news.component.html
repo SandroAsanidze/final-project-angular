@@ -1,73 +1,36 @@
-<button (click)="showWorldBtn()">Worlds</button>
-<button (click)="showSportBtn()">Sports</button>
-<button (click)="showTechnicsBtn()">Technics</button>
-
-<div *ngIf="showSport">
-    <form [formGroup]="loginForm" (submit)="sportsSubmit()">
-        <h2 class="admin">Sports</h2>
+<div class="form-div">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form">
+        <h2 class="news-title">Add News</h2>
+      
         <label class="label">
-            Title:
-            <input type="text" name="title" formControlName="title">
+          Category:
+          <select formControlName="category">
+            <option value="sports">Sports</option>
+            <option value="technics">Technics</option>
+            <option value="worlds">Worlds</option>
+          </select>
+        </label>
+    
+        <label class="label">
+          Title:
+          <input type="text" name="title" formControlName="title">
         </label>
         <label class="label">
-            Description:
-            <input type="text" name="description" formControlName="description">
+          Description:
+          <input type="text" name="description" formControlName="description">
         </label>
         <label class="label">
-            Url To Image:
-            <input type="text" name="urlToImage" formControlName="urlToImage">
+          Url To Image:
+          <input type="text" name="urlToImage" formControlName="urlToImage">
         </label>
         <label class="label">
-            Content:
-            <input type="text" name="content" formControlName="content">
+          Content:
+          <input type="text" name="content" formControlName="content">
         </label>
-        <button>ADD</button>
-    </form>
-</div>
-
-<div *ngIf="showTechnics">
-    <form [formGroup]="loginForm" (submit)="technicsSubmit()">
-        <h2 class="admin">Technics</h2>
-        <label class="label">
-            Title:
-            <input type="text" name="title" formControlName="title">
-        </label>
-        <label class="label">
-            Description:
-            <input type="text" name="description" formControlName="description">
-        </label>
-        <label class="label">
-            Url To Image:
-            <input type="text" name="urlToImage" formControlName="urlToImage">
-        </label>
-        <label class="label">
-            Content:
-            <input type="text" name="content" formControlName="content">
-        </label>
-        <button>ADD</button>
-    </form>
-</div>
-
-
-<div *ngIf="showWorld">
-    <form [formGroup]="loginForm" (submit)="worldsSubmit()">
-        <h2 class="admin">Worlds</h2>
-        <label class="label">
-            Title:
-            <input type="text" name="title" formControlName="title">
-        </label>
-        <label class="label">
-            Description:
-            <input type="text" name="description" formControlName="description">
-        </label>
-        <label class="label">
-            Url To Image:
-            <input type="text" name="urlToImage" formControlName="urlToImage">
-        </label>
-        <label class="label">
-            Content:
-            <input type="text" name="content" formControlName="content">
-        </label>
-        <button>ADD</button>
+      
+        <div style="display: flex;">
+          <button [disabled]="loginForm.invalid" class="add-btn">ADD</button>
+          <button type="button" (click)="resetForm()">Reset</button>
+        </div>
     </form>
 </div>
