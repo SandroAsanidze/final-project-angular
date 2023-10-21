@@ -1,0 +1,11 @@
+<div class="news-container" *ngIf="technicNews">
+    <button class="back-button" (click)="backToPage()">Back</button>
+    <div class="news-content">
+        <img class="news-image" [src]="technicNews.urlToImage" alt="">
+        <div class="news-details">
+            <h5 class="news-title">{{technicNews.title}}</h5>
+            <p class="news-description">{{technicNews.description}}</p>
+            <p class="news-content">{{technicNews.content}}</p>
+        </div>
+    </div>
+</div>

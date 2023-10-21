@@ -24,8 +24,16 @@ export const ROUTE:Route[] = [
         loadComponent: () => import('./features/technics/technics.component').then(c => c.TechnicsComponent),
     },
     {
+        path:'technic/:id',
+        loadComponent: () => import('./features/technics/technic-details/technic-details.component').then(c => c.TechnicDetailsComponent)
+    },
+    {
         path:'sports',
         loadComponent: () => import('./features/sports/sports.component').then(c => c.SportsComponent)
+    },
+    {
+        path:'sports/:id',
+        loadComponent: () => import('./features/sports/sport-details/sport-details.component').then(c => c.SportDetailsComponent)
     },
     {
         path:'weather',

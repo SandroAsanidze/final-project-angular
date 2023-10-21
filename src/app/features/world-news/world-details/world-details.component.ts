@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, Router } from '@angular/router';
-import { World, WorldNews, WorldNewsService } from '../service/world-news.service';
+import {  Router } from '@angular/router';
+import { World, WorldNewsService } from '../service/world-news.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @Component({
@@ -19,7 +19,9 @@ export class WorldDetailsComponent implements OnInit {
   constructor(private router:Router,private worldService:WorldNewsService,private cdr:ChangeDetectorRef){}
   ngOnInit(): void {
     const route = this.router.url;
-    const id = Number(route[route.length - 1]);
+    const segments = route.split('/');
+    const id = Number(segments[segments.length - 1]);
+    
     this.worldService.getSingleWorldNews(id).subscribe(data => {
       this.worldNews = data;
       this.cdr.detectChanges();

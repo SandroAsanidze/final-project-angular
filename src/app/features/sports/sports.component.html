@@ -5,6 +5,7 @@
         <h3>{{ sport.title}}</h3>
         <p>{{ sport.description | slice: 0 : 150 }}...</p>
         <button *ngIf="isAdminTrue()" class="delete" (click)="deleteNews(sport.id)">Delete</button>
+        <a [routerLink]= "['/sports', sport.id]">See more</a>
     </div>
 </div>
 <div class="pagination-div">

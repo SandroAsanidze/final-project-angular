@@ -2,11 +2,12 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { SportsNews, SportsService } from './service/sports.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-sports',
   standalone: true,
-  imports: [CommonModule,HttpClientModule],
+  imports: [CommonModule,HttpClientModule,RouterModule],
   providers:[SportsService],
   templateUrl: './sports.component.html',
   styleUrls: ['./sports.component.scss'],

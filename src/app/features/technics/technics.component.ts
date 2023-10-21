@@ -2,11 +2,12 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TechnicsNews, TechnicsService } from './service/technics.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-technics',
   standalone: true,
-  imports: [CommonModule,HttpClientModule],
+  imports: [CommonModule,HttpClientModule,RouterModule],
   providers:[TechnicsService],
   templateUrl: './technics.component.html',
   styleUrls: ['./technics.component.scss'],
