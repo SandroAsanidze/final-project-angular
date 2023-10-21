@@ -1,0 +1,24 @@
+<div class="update-form" *ngIf="showForm">
+    <form [formGroup]="updateForm">
+      <label class="label">
+        Title:
+        <input type="text" name="title" formControlName="title">
+      </label>
+      <label class="label">
+        Description:
+        <input type="text" name="description" formControlName="description">
+        </label>
+        <label class="label">
+            Url To Image:
+            <input type="text" name="urlToImage" formControlName="urlToImage">
+        </label>
+        <label class="label">
+            Content:
+            <input type="text" name="content" formControlName="content">
+        </label>
+  
+      <div>
+        <button [disabled]="updateForm.invalid" (click)="updateNews(selectedNews.id)">Update</button>
+      </div>
+    </form>
+</div>

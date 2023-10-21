@@ -38,4 +38,8 @@ export class TechnicsService {
   public deleteSingleTechnicNews(id:number) {
     return this.http.delete(`${this._url}/${id}`);
   }
+
+  public updateTechnicNews(id:number,body:Technics):Observable<Technics> {
+    return this.http.patch<Technics>(`${this._url}/${id}`,body)
+  }
 }

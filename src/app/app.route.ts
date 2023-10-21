@@ -17,7 +17,7 @@ export const ROUTE:Route[] = [
     },
     {
         path:'technic',
-        loadComponent: () => import('./features/technics/technics.component').then(c => c.TechnicsComponent)
+        loadComponent: () => import('./features/technics/technics.component').then(c => c.TechnicsComponent),
     },
     {
         path:'sports',

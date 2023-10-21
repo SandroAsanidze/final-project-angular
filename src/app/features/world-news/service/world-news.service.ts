@@ -19,7 +19,7 @@ export interface World {
 @Injectable({
   providedIn: 'root'
 })
-export class WorlNewsService {
+export class WorldNewsService {
   private _url:string = 'http://localhost:3000/world';
   constructor(private http:HttpClient) { }
 
@@ -37,5 +37,9 @@ export class WorlNewsService {
 
   public deleteSingleWorldNews(id:number) {
     return this.http.delete(`${this._url}/${id}`);
+  }
+
+  public updateWorldNews(id:number,body:World):Observable<World> {
+    return this.http.patch<World>(`${this._url}/${id}`,body)
   }
 }

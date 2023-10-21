@@ -33,4 +33,8 @@ export class SportsService {
   public deleteSingleNews(id:number) {
     return this.http.delete(`${this._url}/${id}`);
   }
+
+  public updateSportNews(id:number,body:Sport):Observable<Sport> {
+    return this.http.patch<Sport>(`${this._url}/${id}`,body)
+  }
 }

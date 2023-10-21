@@ -1,10 +1,10 @@
 <h1 class="title">Technics News</h1>
 <div class="articles">
-  <div class="article" *ngFor="let article of onePageData()">
-        <img class="article-img" [src]="article.urlToImage" alt="{{ article.title }}">
-        <h3>{{ article.title}}</h3>
-        <p>{{ article.description | slice: 0 : 100 }}...</p>
-        <button *ngIf="isAdminTrue()" (click)="deleteNews(article.id)">Delete</button>
+  <div class="article" *ngFor="let technic of onePageData()">
+      <img class="article-img" [src]="technic.urlToImage" alt="{{ technic.title }}">
+      <h3>{{ technic.title}}</h3>
+      <p>{{ technic.description | slice: 0 : 100 }}...</p>
+      <button *ngIf="isAdminTrue()" class="delete" (click)="deleteNews(technic.id)">Delete</button>
   </div>
 </div>
 <div class="pagination-div">

@@ -1,20 +1,20 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { WorlNewsService, WorldNews } from './service/world-news.service';
-
-
+import { WorldNewsService, WorldNews } from './service/world-news.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-world-news',
   standalone: true,
-  imports: [CommonModule,HttpClientModule],
-  providers:[WorlNewsService],
+  imports: [CommonModule,HttpClientModule,ReactiveFormsModule],
+  providers:[WorldNewsService],
   templateUrl: './world-news.component.html',
   styleUrls: ['./world-news.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class WorldNewsComponent implements OnInit {
-  constructor(private worldService:WorlNewsService,public cdr:ChangeDetectorRef){}
+  constructor(private worldService:WorldNewsService,public cdr:ChangeDetectorRef){}
   worldNews: WorldNews[]=[];
 
   ngOnInit(): void {
@@ -83,4 +83,32 @@ export class WorldNewsComponent implements OnInit {
       this.worldNews.splice(index, 1);
     }
   };
+  // showForm:boolean=false;
+  // selectedNews: WorldNews | null = null;
+
+  // editButton(id: number) {
+  //   const selected = this.worldNews.find((worldNews) => worldNews.id === id);
+  //   if (selected) {
+  //     this.selectedNews = selected;
+  //     this.updateForm.patchValue({
+  //       title:selected.title,
+  //       description:selected.description,
+  //       urlToImage:selected.urlToImage,
+  //       content:selected.content
+  //     });
+  //   }
+    
+  //   this.showForm = !this.showForm;
+  // }
+
+  // public updateForm = this.formBuilder.group({
+  //   title:['',Validators.required],
+  //   description:['',Validators.required],
+  //   urlToImage:['',[Validators.required,Validators.pattern(/https?:\/\/\S+\.(?:jpg|jpeg|png|gif|bmp|svg|webp)/i)]],
+  //   content:['',Validators.required],
+  // })
+
+  // cancelButton() {
+  //   this.showForm = false;
+  // }
 }

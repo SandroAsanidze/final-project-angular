@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy } from '@angular/core';
 import { Component,OnInit  } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, Router, RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { HeaderComponent } from './features/header/header.component';
 import { FooterComponent } from './features/footer/footer.component';
 import { MainNewsComponent } from './features/main-news/main-news.component';
@@ -18,10 +18,6 @@ import { MainNewsComponent } from './features/main-news/main-news.component';
 export class AppComponent implements OnInit {
   constructor(private router:Router){}
   hideMainNews:boolean = false;
-
-  shouldCenterMain(): boolean {
-    return this.hideMainNews;
-  }
 
   ngOnInit() {
     this.router.events.subscribe(() => {
