@@ -5,6 +5,8 @@
         <h3>{{ world.title}}</h3>
         <p>{{ world.description | slice: 0 : 50 }}...</p>
         <button *ngIf="isAdminTrue()" class="delete" (click)="deleteNews(world.id)">Delete</button>
+        <!-- <button *ngIf="isAdminTrue()" class="edit" (click)="editButton(world.id)">Edit</button> -->
+        <a [routerLink]= "['/world', world.id]">See more</a>
     </div>
 </div>
 <div class="pagination-div">

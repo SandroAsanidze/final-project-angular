@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-world-news',
   standalone: true,
-  imports: [CommonModule,HttpClientModule,ReactiveFormsModule],
+  imports: [CommonModule,HttpClientModule,ReactiveFormsModule,RouterModule],
   providers:[WorldNewsService],
   templateUrl: './world-news.component.html',
   styleUrls: ['./world-news.component.scss'],

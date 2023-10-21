@@ -16,6 +16,10 @@ export const ROUTE:Route[] = [
         loadComponent: () => import('./features/world-news/world-news.component').then(c => c.WorldNewsComponent)
     },
     {
+        path:'world/:id',
+        loadComponent: () => import('./features/world-news/world-details/world-details.component').then(c => c.WorldDetailsComponent)
+    },
+    {
         path:'technic',
         loadComponent: () => import('./features/technics/technics.component').then(c => c.TechnicsComponent),
     },

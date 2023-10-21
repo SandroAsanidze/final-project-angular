@@ -1,0 +1,11 @@
+<div class="details" *ngIf="worldNews">
+    <button (click)="backToPage()">Back</button>
+    <div class="details-div">
+        <img [src]="worldNews.urlToImage" alt="">
+        <div class="details-paragraph">
+            <h5>{{worldNews.title}}</h5>
+            <p>{{worldNews.description}}</p>
+            <p>{{worldNews.content}}</p>
+        </div>
+    </div>
+</div>
