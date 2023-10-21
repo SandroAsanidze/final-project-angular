@@ -1,12 +1,14 @@
-<h1 class="title">World News</h1>
+<h1 class="title">World</h1>
 <div class="articles">
     <div class="article" *ngFor="let world of onePageData()">
         <img class="article-img" [src]="world.urlToImage" alt="{{ world.title }}">
         <h3>{{ world.title}}</h3>
         <p>{{ world.description | slice: 0 : 50 }}...</p>
-        <button *ngIf="isAdminTrue()" class="delete" (click)="deleteNews(world.id)">Delete</button>
-        <!-- <button *ngIf="isAdminTrue()" class="edit" (click)="editButton(world.id)">Edit</button> -->
         <a [routerLink]= "['/world', world.id]">See more</a>
+        <div>
+            <button *ngIf="isAdminTrue()" class="delete" (click)="deleteNews(world.id)">Delete</button>
+        </div>
+        <!-- <button *ngIf="isAdminTrue()" class="edit" (click)="editButton(world.id)">Edit</button> -->
     </div>
 </div>
 <div class="pagination-div">

@@ -1,11 +1,13 @@
-<h1 class="title">Technics News</h1>
+<h1 class="title">Technology</h1>
 <div class="articles">
   <div class="article" *ngFor="let technic of onePageData()">
       <img class="article-img" [src]="technic.urlToImage" alt="{{ technic.title }}">
       <h3>{{ technic.title}}</h3>
       <p>{{ technic.description | slice: 0 : 100 }}...</p>
-      <button *ngIf="isAdminTrue()" class="delete" (click)="deleteNews(technic.id)">Delete</button>
       <a [routerLink]= "['/technic',technic.id]">See more</a>
+      <div>
+        <button *ngIf="isAdminTrue()" class="delete" (click)="deleteNews(technic.id)">Delete</button>
+    </div>
   </div>
 </div>
 <div class="pagination-div">
