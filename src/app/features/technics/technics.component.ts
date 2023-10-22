@@ -3,12 +3,18 @@ import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TechnicsNews, TechnicsService } from './service/technics.service';
 import { RouterModule } from '@angular/router';
+import { WorldNews, WorldNewsService } from '../world-news/service/world-news.service';
+import { CommonInterface } from '../add-news/add-news.component';
+import { SportsService } from '../sports/service/sports.service';
+import { FormBuilder, Validators } from '@angular/forms';
+import { ArticleDataService } from 'src/app/core/services/article-data.service';
+import { ForupdateComponent } from '../forupdate/forupdate.component';
 
 @Component({
   selector: 'app-technics',
   standalone: true,
-  imports: [CommonModule,HttpClientModule,RouterModule],
-  providers:[TechnicsService],
+  imports: [CommonModule,HttpClientModule,RouterModule,ForupdateComponent],
+  providers:[WorldNewsService,HttpClient,TechnicsService,SportsService],
   templateUrl: './technics.component.html',
   styleUrls: ['./technics.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -16,7 +22,7 @@ import { RouterModule } from '@angular/router';
 export class TechnicsComponent {
   articles: TechnicsNews[]=[];
 
-  constructor(private technicsService:TechnicsService,public cdr:ChangeDetectorRef){}
+  constructor(private technicsService:TechnicsService,public cdr:ChangeDetectorRef,private formBuilder:FormBuilder, public articleDataService:ArticleDataService){}
 
   ngOnInit(): void {
     this.articles = [];
@@ -84,4 +90,19 @@ export class TechnicsComponent {
       this.articles.splice(index, 1);
     }
   };
+
+  selectedNews: WorldNews | null = null;
+
+  editButton(article: CommonInterface) {
+    this.articleDataService.addSelectedArticle(article);
+    this.articleDataService.changeShowForm(!this.articleDataService.showForm);
+    window.scroll({ top: 100000, left: 0, behavior: 'smooth' });;
+  }
+
+  public updateForm = this.formBuilder.group({
+    title:['',Validators.required],
+    description:['',Validators.required],
+    urlToImage:['',[Validators.required,Validators.pattern(/https?:\/\/\S+\.(?:jpg|jpeg|png|gif|bmp|svg|webp)/i)]],
+    content:['',Validators.required],
+  })
 }

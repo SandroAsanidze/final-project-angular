@@ -1,4 +1,18 @@
 .main {
     display: flex;
     background-color: #f6f8fc;
+    .scrollToTop {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        cursor: pointer;
+        width: 30px;
+        height: 30px; 
+        border: 1px solid #00ccff;
+        border-radius: 50%; 
+        background-color: #00ffff;
+        padding: 10px;
+        z-index: 2;
+      }
+      
 }

@@ -1,14 +1,13 @@
 import { ChangeDetectionStrategy, Component,OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
-import { AuthService } from 'src/app/core/services/auth.service';
 import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [CommonModule,RouterModule,LoginComponent],
-  providers:[AuthService],
+  providers:[],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

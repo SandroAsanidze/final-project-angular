@@ -7,8 +7,11 @@
         <a [routerLink]= "['/world', world.id]">See more</a>
         <div>
             <button *ngIf="isAdminTrue()" class="delete" (click)="deleteNews(world.id)">Delete</button>
+            <button *ngIf="isAdminTrue()" class="edit" (click)="editButton(world)">Edit</button>
         </div>
-        <!-- <button *ngIf="isAdminTrue()" class="edit" (click)="editButton(world.id)">Edit</button> -->
+    </div>
+    <div *ngIf="this.articleDataService.showForm">
+        <app-forupdate></app-forupdate>
     </div>
 </div>
 <div class="pagination-div">

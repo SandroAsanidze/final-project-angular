@@ -1,20 +1,25 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
-import { WorldNewsService, WorldNews } from './service/world-news.service';
-import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { WorldNewsService, WorldNews, World } from './service/world-news.service';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { ForupdateComponent } from '../forupdate/forupdate.component';
+import { TechnicsService } from '../technics/service/technics.service';
+import { SportsService } from '../sports/service/sports.service';
+import { ArticleDataService } from 'src/app/core/services/article-data.service';
+import { CommonInterface } from '../add-news/add-news.component';
 @Component({
   selector: 'app-world-news',
   standalone: true,
-  imports: [CommonModule,HttpClientModule,ReactiveFormsModule,RouterModule],
-  providers:[WorldNewsService],
+  imports: [CommonModule,HttpClientModule,ReactiveFormsModule,RouterModule,ForupdateComponent],
+  providers:[WorldNewsService,HttpClient,TechnicsService,SportsService],
   templateUrl: './world-news.component.html',
   styleUrls: ['./world-news.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class WorldNewsComponent implements OnInit {
-  constructor(private worldService:WorldNewsService,public cdr:ChangeDetectorRef){}
+  constructor(public articleDataService: ArticleDataService,private formBuilder:FormBuilder,private worldService:WorldNewsService,public cdr:ChangeDetectorRef){}
   worldNews: WorldNews[]=[];
 
   ngOnInit(): void {
@@ -83,32 +88,19 @@ export class WorldNewsComponent implements OnInit {
       this.worldNews.splice(index, 1);
     }
   };
-  // showForm:boolean=false;
-  // selectedNews: WorldNews | null = null;
+  
+  selectedNews: WorldNews | null = null;
 
-  // editButton(id: number) {
-  //   const selected = this.worldNews.find((worldNews) => worldNews.id === id);
-  //   if (selected) {
-  //     this.selectedNews = selected;
-  //     this.updateForm.patchValue({
-  //       title:selected.title,
-  //       description:selected.description,
-  //       urlToImage:selected.urlToImage,
-  //       content:selected.content
-  //     });
-  //   }
-    
-  //   this.showForm = !this.showForm;
-  // }
+  editButton(article: CommonInterface) {
+    this.articleDataService.addSelectedArticle(article);
+    this.articleDataService.changeShowForm(!this.articleDataService.showForm);
+    window.scroll({ top: 10000, left: 0, behavior: 'smooth' });
+  }
 
-  // public updateForm = this.formBuilder.group({
-  //   title:['',Validators.required],
-  //   description:['',Validators.required],
-  //   urlToImage:['',[Validators.required,Validators.pattern(/https?:\/\/\S+\.(?:jpg|jpeg|png|gif|bmp|svg|webp)/i)]],
-  //   content:['',Validators.required],
-  // })
-
-  // cancelButton() {
-  //   this.showForm = false;
-  // }
+  public updateForm = this.formBuilder.group({
+    title:['',Validators.required],
+    description:['',Validators.required],
+    urlToImage:['',[Validators.required,Validators.pattern(/https?:\/\/\S+\.(?:jpg|jpeg|png|gif|bmp|svg|webp)/i)]],
+    content:['',Validators.required],
+  })
 }

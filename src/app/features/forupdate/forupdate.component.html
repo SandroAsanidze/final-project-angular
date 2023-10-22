@@ -1,24 +1,25 @@
-<div class="update-form" *ngIf="showForm">
-    <form [formGroup]="updateForm">
+<div class="update-form">
+    <form [formGroup]="updateForm" class="form" (ngSubmit)="updateNews(selectedNews.id)">
       <label class="label">
         Title:
         <input type="text" name="title" formControlName="title">
       </label>
       <label class="label">
         Description:
-        <input type="text" name="description" formControlName="description">
-        </label>
-        <label class="label">
-            Url To Image:
-            <input type="text" name="urlToImage" formControlName="urlToImage">
-        </label>
-        <label class="label">
-            Content:
-            <input type="text" name="content" formControlName="content">
-        </label>
+        <textarea rows="4" cols="50" name="description" formControlName="description"></textarea>
+      </label>
+      <label class="label">
+          Url To Image:
+          <input type="text" name="urlToImage" formControlName="urlToImage">
+      </label>
+      <label class="label">
+          Content:
+          <input type="text" name="content" formControlName="content">
+      </label>
   
       <div>
-        <button [disabled]="updateForm.invalid" (click)="updateNews(selectedNews.id)">Update</button>
+        <button [disabled]="updateForm.invalid">Update</button>
+        <button type="button" class="cancel" [disabled]="updateForm.invalid" (click)="cancelButton()">Cancel</button>
       </div>
     </form>
 </div>
