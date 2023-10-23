@@ -25,7 +25,7 @@ export interface Weather {
 export class WeatherService {
 
   constructor(private http:HttpClient) { }
-  APIkey = 'aba09526722cb0d5c860492573a98768'
+  APIkey = 'aba09526722cb0d5c860492573a98768';
 
   getWeatherData(city:string):Observable<Weather> {
     return this.http.get<Weather>(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${this.APIkey}`);

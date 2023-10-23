@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { WeatherService } from './service/weather.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-weather',
@@ -18,9 +19,16 @@ export class WeatherComponent implements OnInit {
   city:string='tbilisi'
   today : Date = new Date();
 
-  constructor(private cdr:ChangeDetectorRef,private weatherService:WeatherService){}
+  constructor(
+    private activatedRoute:ActivatedRoute,
+    private cdr:ChangeDetectorRef,
+    private weatherService:WeatherService
+  ){}
   ngOnInit(): void {
     this.getWeather(this.city);
+    this.activatedRoute.data.subscribe((m:any) => {
+      this.weatherData = m.routeResolver;
+    })
   }
 
   KelvinToCelsius(kelvin: number): number {

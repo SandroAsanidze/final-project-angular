@@ -1,5 +1,6 @@
 import { Route } from "@angular/router";
 import { authGuard, authGuard1 } from "./core/guards/auth.guard";
+import { weatherResolver } from "./features/weather/resolver/weather.resolver";
 
 export const ROUTE:Route[] = [
     {
@@ -37,7 +38,10 @@ export const ROUTE:Route[] = [
     },
     {
         path:'weather',
-        loadComponent: () => import('./features/weather/weather.component').then(c => c.WeatherComponent)
+        loadComponent: () => import('./features/weather/weather.component').then(c => c.WeatherComponent),
+        resolve:{
+            routeResolver:weatherResolver
+        }
     },
     {
         path:'login',
