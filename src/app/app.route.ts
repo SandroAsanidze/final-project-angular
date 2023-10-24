@@ -1,6 +1,7 @@
 import { Route } from "@angular/router";
 import { authGuard, authGuard1 } from "./core/guards/auth.guard";
 import { weatherResolver } from "./features/weather/resolver/weather.resolver";
+import { newsResolver } from "./features/news/resolver/news.resolver";
 
 export const ROUTE:Route[] = [
     {
@@ -14,7 +15,10 @@ export const ROUTE:Route[] = [
     },
     {
         path:'world',
-        loadComponent: () => import('./features/news/news.component').then(c => c.NewsComponent)
+        loadComponent: () => import('./features/news/news.component').then(c => c.NewsComponent),
+        resolve: {
+            resolveNews:newsResolver
+        }
     },
     {
         path:'world/:id',
@@ -22,7 +26,10 @@ export const ROUTE:Route[] = [
     },
     {
         path:'technology',
-        loadComponent: () => import('./features/news/news.component').then(c => c.NewsComponent)
+        loadComponent: () => import('./features/news/news.component').then(c => c.NewsComponent),
+        resolve: {
+            resolveNews:newsResolver
+        }
     },
     {
         path:'technology/:id',
@@ -31,6 +38,9 @@ export const ROUTE:Route[] = [
     {
         path:'sport',
         loadComponent: () => import('./features/news/news.component').then(c => c.NewsComponent),
+        resolve: {
+            resolveNews:newsResolver
+        }
     },
     {
         path:'sport/:id',

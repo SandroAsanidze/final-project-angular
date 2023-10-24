@@ -11,6 +11,8 @@ interface AdminInfo {
   providedIn: 'root'
 })
 export class LoginService {
+  hideEverything:boolean=false;
+
   private _url:string='http://localhost:3000/information'
   constructor(private http:HttpClient) { }
 

@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component,OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { LoginComponent } from '../login/login.component';
+import { LoaderService } from './loader/loader.service';
 
 @Component({
   selector: 'app-header',
@@ -13,7 +14,7 @@ import { LoginComponent } from '../login/login.component';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent implements OnInit{
-  constructor(private router:Router){}
+  constructor(private router:Router,public loaderService:LoaderService){}
   ngOnInit() {
     this.Admin();
   }

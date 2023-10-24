@@ -62,6 +62,9 @@ export class NewsComponent {
           this.cdr.detectChanges();
         })
       }
+      this.route.data.subscribe((m:any) => {
+        this.news = m.resolveNews;
+      })
   }
 
 
