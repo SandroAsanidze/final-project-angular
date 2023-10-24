@@ -1,4 +1,5 @@
 <div class="weather-div">
+    <div class="box"></div>
     <h2>Weather App</h2>
     <div class="weather-container">
         <div class="weather-data">
@@ -20,7 +21,7 @@
         </div>
         <div class="city-div">
             <label>
-                City:
+                Location:
                 <input type='text' [(ngModel)]="city">
             </label>
             <button (click)='getWeather(city)'>Get Weather</button>

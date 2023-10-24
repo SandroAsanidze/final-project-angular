@@ -1,3 +1,4 @@
+<div class="box"></div>
 <h1 class="title">{{currentPath}}</h1>
 <div class="articles">
     <div class="article" *ngFor="let news of onePageData()">
@@ -5,13 +6,16 @@
         <div class="article-div">
             <div class="info-div">
                 <p>{{ news.description | slice: 0 : 200 }}...</p>
-                <a [routerLink]= "[news.id]" class="see-more">See more</a>
+                <a [routerLink]= "[news.id]" class="see-more">See more...</a>
                 <div class="admin-buttons">
                     <button *ngIf="isAdminTrue()" class="delete" (click)="deleteNews(news.id)">Delete</button>
                     <button *ngIf="isAdminTrue()" class="edit" (click)="editButton(news)">Edit</button>
                 </div>
             </div>
-            <h3>{{ news.title}}</h3>
+            <div class="title-div">
+                <h3>{{currentPath}}</h3>
+                <h2>{{news.title}}</h2>
+            </div>
             <img class="article-img" [src]="news.urlToImage" alt="{{ news.title }}">
         </div>
     </div>
