@@ -6,9 +6,11 @@
 }
 .box {
     margin: 0 auto;
+    margin-top: 100px;
     margin-bottom: -20px;
     width: 80px;
     height: 20px;
+    border-radius: 50px;
     background-color: blue;
 }
 .articles {
@@ -102,6 +104,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    margin-bottom: 50px;
     .pagination {
       list-style: none;
       padding: 0;

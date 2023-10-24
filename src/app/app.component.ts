@@ -5,6 +5,7 @@ import { Router, RouterModule } from '@angular/router';
 import { HeaderComponent } from './features/header/header.component';
 import { FooterComponent } from './features/footer/footer.component';
 import { MainNewsComponent } from './features/main-news/main-news.component';
+import { LoginService } from './features/login/service/login.service';
 
 @Component({
   selector: 'app-root',

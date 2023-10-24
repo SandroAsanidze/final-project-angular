@@ -1,4 +1,4 @@
-<div class="header">
+<!-- <div class="header">
     <div class="logo-div">
         <div class="the-date">
             <div class="the">THE</div>
@@ -46,4 +46,50 @@
         </div>
     </div>
 </div>
-<div class="under-line"></div>
+<div class="under-line"></div> -->
+
+
+<div class="header">
+    <div class="header-div">
+        <div class="logo-div">
+            <div class="the-date">
+                <div class="the">THE</div>
+                <div class="date">{{today| date : 'longDate'}}</div>
+            </div>
+            <h3 class="news-portal" routerLink="home"><a>News<span>Portal</span></a></h3>
+        </div>
+        <div class="nav-login">
+            <nav class="navigation">
+                <ul class="nav-ul">
+                    <li>
+                        <a routerLinkActive="activee"  class="nav-li" routerLink="home">Home</a>
+                    </li>
+                    <li>
+                        <a routerLinkActive="active" class="nav-li" routerLink="world">World</a>
+                    </li>
+                    <li>
+                        <a routerLinkActive="active" class="nav-li" routerLink="technology">Technology</a>
+                    </li>
+                    <li>
+                        <a routerLinkActive="active" class="nav-li" routerLink="sport">Sports</a>
+                    </li>
+                    <li>
+                        <a routerLinkActive="active" class="nav-li" routerLink="weather">Weather</a>
+                    </li>
+                    <li [hidden]="!Admin()">
+                        <a routerLinkActive="active" class="nav-li" routerLink="add-news">Add</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="login">
+                <img [hidden]="Admin()" routerLink="login" class="login-svg" src="../../../assets/user-solid.svg" alt="login-svg">
+                <p class="log-out" [hidden]="!Admin()" (click)="logOut()">Log Out</p>
+            </div>
+        </div>
+    </div>
+    <div class="social-media">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-instagram"></i>
+    </div>
+</div>

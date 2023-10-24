@@ -55,4 +55,8 @@ export class LoginComponent implements OnInit {
       this.password = data.password;
     });
   }
+
+  backToHome() {
+    this.router.navigate(['home']);
+  }
 }

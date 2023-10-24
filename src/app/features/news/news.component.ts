@@ -66,7 +66,7 @@ export class NewsComponent {
 
 
   currentPage: number = 1;
-  itemsPerPage: number = 6; 
+  itemsPerPage: number = 5; 
   totalItems: number = 0;
 
   onePageData() {
