@@ -1,0 +1,103 @@
+.title {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.articles {
+    width: 90%;
+    margin-left: 50px;
+    .article {
+        width: 100%;
+        .line {
+            width: 100%;
+            height: 2px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            background-color: black;
+        }
+        .article-div {
+            display: flex;
+            justify-content: space-between;
+            height: 250px;
+            .article-img {
+                width: 30%;
+                height: 100%;
+            }
+            .info-div {
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+                .see-more {
+                    width: 60px;
+                    text-decoration: none;
+                    background-color: #007bff;
+                    color: white; 
+                    padding: 5px 10px;
+                    border-radius: 4px; 
+                    display: inline-block;
+                    cursor: pointer; 
+                    margin-bottom: 40px;
+                    &:hover {
+                        background-color: #0056b3;
+                    }
+                }
+                
+                p {
+                    font-size: 22px;
+                }
+                .admin-buttons {
+                    width: 120px;;
+                    display: flex;
+                    justify-content: space-between;
+                    .delete {
+                        background-color: red;
+                        color: white;
+                        border: none;
+                        border-radius: 7px;
+                        padding: 5px 10px;
+                        cursor: pointer;
+                    }
+                    .edit {
+                        background-color: blue;
+                        color: white;
+                        border: none;
+                        border-radius: 7px;
+                        padding: 5px 10px;
+                        cursor: pointer;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+.pagination-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    .pagination {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      li {
+          margin: 0 5px;
+          a {
+              text-decoration: none;
+              background-color: #00aeff;
+              color: white;
+              padding: 5px 10px;
+              border-radius: 4px;
+              cursor: pointer;
+              transition: background-color 0.2s;
+              &:hover {
+                  background-color: #0056b3;
+                }
+        }
+      }
+    }
+}
+.pagination-div .pagination li a.active {
+  background-color: #033c46;
+}

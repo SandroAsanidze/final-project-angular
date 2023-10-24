@@ -25,8 +25,8 @@ export class AppComponent implements OnInit {
       const route = this.router.url;
       const segments = route.split('/');
       const id = Number(segments[segments.length - 1]);
-        
-      if(currentPath === `/world/${id}`|| currentPath === `/technic/${id}` || currentPath === `/sports/${id}` || currentPath === '/login' || currentPath === '/weather' || currentPath === '/add-news') {
+       
+      if(currentPath === `/world/${id}`|| currentPath === `/technic/${id}` || currentPath === `/sport/${id}` || currentPath === '/login' || currentPath === '/weather' || currentPath === '/add-news') {
         this.hideMainNews = false;
       }
       else {

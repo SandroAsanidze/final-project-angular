@@ -25,10 +25,10 @@
                         <a routerLinkActive="active" class="nav-li" routerLink="world">World</a>
                     </li>
                     <li>
-                        <a routerLinkActive="active" class="nav-li" routerLink="technic">Technology</a>
+                        <a routerLinkActive="active" class="nav-li" routerLink="technology">Technology</a>
                     </li>
                     <li>
-                        <a routerLinkActive="active" class="nav-li" routerLink="sports">Sports</a>
+                        <a routerLinkActive="active" class="nav-li" routerLink="sport">Sports</a>
                     </li>
                     <li>
                         <a routerLinkActive="active" class="nav-li" routerLink="weather">Weather</a>
@@ -41,7 +41,7 @@
             <div class="nav-line"></div>
             <div class="login">
                 <img [hidden]="Admin()" routerLink="login" class="login-svg" src="../../../assets/user-solid.svg" alt="login-svg">
-                <p [hidden]="!Admin()" (click)="logOut()">Log Out</p>
+                <p class="log-out" [hidden]="!Admin()" (click)="logOut()">Log Out</p>
             </div>
         </div>
     </div>

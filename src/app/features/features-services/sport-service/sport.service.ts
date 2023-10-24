@@ -14,7 +14,7 @@ export interface SportsNews {
 @Injectable({
   providedIn: 'root'
 })
-export class SportsService {
+export class SportService {
   private _url:string='http://localhost:3000/sports';
   constructor(private http:HttpClient) { }
 

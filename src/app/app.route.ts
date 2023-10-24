@@ -14,27 +14,27 @@ export const ROUTE:Route[] = [
     },
     {
         path:'world',
-        loadComponent: () => import('./features/world-news/world-news.component').then(c => c.WorldNewsComponent)
+        loadComponent: () => import('./features/news/news.component').then(c => c.NewsComponent)
     },
     {
         path:'world/:id',
-        loadComponent: () => import('./features/world-news/world-details/world-details.component').then(c => c.WorldDetailsComponent)
+        loadComponent: () => import('./features/news/single-news/single-news.component').then(c => c.SingleNewsComponent)
     },
     {
-        path:'technic',
-        loadComponent: () => import('./features/technics/technics.component').then(c => c.TechnicsComponent),
+        path:'technology',
+        loadComponent: () => import('./features/news/news.component').then(c => c.NewsComponent)
     },
     {
-        path:'technic/:id',
-        loadComponent: () => import('./features/technics/technic-details/technic-details.component').then(c => c.TechnicDetailsComponent)
+        path:'technology/:id',
+        loadComponent: () => import('./features/news/single-news/single-news.component').then(c => c.SingleNewsComponent)
     },
     {
-        path:'sports',
-        loadComponent: () => import('./features/sports/sports.component').then(c => c.SportsComponent)
+        path:'sport',
+        loadComponent: () => import('./features/news/news.component').then(c => c.NewsComponent),
     },
     {
-        path:'sports/:id',
-        loadComponent: () => import('./features/sports/sport-details/sport-details.component').then(c => c.SportDetailsComponent)
+        path:'sport/:id',
+        loadComponent: () => import('./features/news/single-news/single-news.component').then(c => c.SingleNewsComponent)
     },
     {
         path:'weather',

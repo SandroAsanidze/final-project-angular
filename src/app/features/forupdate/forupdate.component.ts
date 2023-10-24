@@ -1,11 +1,11 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { WorldNewsService } from '../world-news/service/world-news.service';
+import { WorldNewsService } from '../features-services/world-service/world-news.service';
 import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { SportsService } from '../sports/service/sports.service';
-import { TechnicsService } from '../technics/service/technics.service';
+import { TechnicsService } from '../features-services/technic-service/technics.service';
 import { ActivatedRoute } from '@angular/router';
 import { ArticleDataService } from 'src/app/core/services/article-data.service';
+import { SportService } from '../features-services/sport-service/sport.service';
 
 @Component({
   selector: 'app-forupdate',
@@ -20,7 +20,7 @@ export class ForupdateComponent implements OnInit {
     private articleDataService: ArticleDataService,
     private route: ActivatedRoute,
     private technicService:TechnicsService,
-    private sportsService:SportsService,
+    private sportsService:SportService,
     private worldService:WorldNewsService,
     private formBuilder:FormBuilder) {}
     
@@ -46,7 +46,7 @@ export class ForupdateComponent implements OnInit {
 
     const currentRoute = this.route.snapshot.routeConfig?.path;
     
-    if (currentRoute === 'sports') {
+    if (currentRoute === 'sport') {
       this.sportsService.getSingleNews(id).subscribe(() => {
         this.sportsService.updateSportNews(id, this.selectedNews).subscribe();
       });

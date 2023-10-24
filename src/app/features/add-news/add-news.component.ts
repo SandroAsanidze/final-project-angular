@@ -1,10 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SportsService } from '../sports/service/sports.service';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { TechnicsService } from '../technics/service/technics.service';
-import { WorldNewsService, World, WorldNews } from '../world-news/service/world-news.service';
+import { TechnicsService } from '../features-services/technic-service/technics.service';
+import { WorldNewsService, World } from '../features-services/world-service/world-news.service';
+import { SportService } from '../features-services/sport-service/sport.service';
 
 export interface Sport {
   title: string;
@@ -24,14 +24,14 @@ export interface CommonInterface {
   selector: 'app-add-news',
   standalone: true,
   imports: [CommonModule,HttpClientModule,ReactiveFormsModule],
-  providers:[SportsService,TechnicsService,WorldNewsService],
+  providers:[SportService,TechnicsService,WorldNewsService],
   templateUrl: './add-news.component.html',
   styleUrls: ['./add-news.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AddNewsComponent {
   constructor(private worldService:WorldNewsService,
-    private sportsService:SportsService,
+    private sportsService:SportService,
     private technicsService:TechnicsService,
     private formBuilder:FormBuilder){}
 
