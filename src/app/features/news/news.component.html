@@ -2,6 +2,10 @@
     <div class="box"></div>
 </div>
 <h1 class="title">{{currentPath}}</h1>
+<div class="error" *ngIf="errorMessage">
+    <h2>Something went wrong...</h2>
+    <h3>{{errorMessage}}</h3>
+</div>
 <div class="articles">
     <div class="article" *ngFor="let news of onePageData()">
         <div class="line"></div>
@@ -22,7 +26,7 @@
         </div>
     </div>
 </div>
-<div class="pagination-div">
+<div class="pagination-div" *ngIf="!errorMessage">
     <ul class="pagination" *ngFor="let page of pageNumbers">
         <li><a (click)="currentPage = page" [class.active]="currentPage === page" (click)="scrollToTop()">{{page}}</a></li>
     </ul>

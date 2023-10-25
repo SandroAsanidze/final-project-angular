@@ -18,6 +18,7 @@ export class WeatherComponent implements OnInit {
   weatherData:any;
   city:string='tbilisi'
   today : Date = new Date();
+  errorMessage:string='';
 
   constructor(
     private activatedRoute:ActivatedRoute,
@@ -41,6 +42,8 @@ export class WeatherComponent implements OnInit {
     }
     this.weatherService.getWeatherData(city).subscribe(data => {
       this.weatherData = data;
+    },(error) => {
+      this.errorMessage = error;
     })
   }
 }

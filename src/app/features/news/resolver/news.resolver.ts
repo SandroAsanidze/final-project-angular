@@ -6,8 +6,6 @@ import { TechnicsService } from 'src/app/shared/features-services/technic-servic
 import { WorldNewsService } from 'src/app/shared/features-services/world-service/world-news.service';
 
 export const newsResolver: ResolveFn<any> = (route, state) => {
-
-  console.log(route.routeConfig?.path);
   const currentPath = route.routeConfig?.path;
   
   if(currentPath === 'world') {

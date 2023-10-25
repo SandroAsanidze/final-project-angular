@@ -8,8 +8,9 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { ForupdateComponent } from '../forupdate/forupdate.component';
 import { TechnicsService } from 'src/app/shared/features-services/technic-service/technics.service';
 import { SportService } from 'src/app/shared/features-services/sport-service/sport.service';
-import { WorldNews, WorldNewsService } from 'src/app/shared/features-services/world-service/world-news.service';
+import { WorldNewsService } from 'src/app/shared/features-services/world-service/world-news.service';
 import { SportsNews } from 'src/app/shared/interfaces/sports.interface';
+import { WorldNews } from 'src/app/shared/interfaces/world.interface';
 
 @Component({
   selector: 'app-news',
@@ -47,6 +48,7 @@ export class NewsComponent {
   ){}
   news: SportsNews[]=[];
   currentPath:string | undefined;
+  errorMessage:string='';
 
   ngOnInit(): void {
       let currentRoute = this.route.snapshot.routeConfig?.path;
@@ -57,6 +59,9 @@ export class NewsComponent {
         this.news = [];
         this.sportService.getSportsNews().subscribe(data => {
           this.news = data;
+        },(error) => {
+          this.errorMessage = error;
+          this.cdr.detectChanges();
         })
 
       }
@@ -65,6 +70,9 @@ export class NewsComponent {
         this.news = [];
         this.technicService.getNews().subscribe(data => {
           this.news = data;
+        },(error) => {
+          this.errorMessage = error;
+          this.cdr.detectChanges();
         })
       }
 
@@ -72,6 +80,9 @@ export class NewsComponent {
         this.news = [];
         this.worldService.getWorldNews().subscribe(data => {
           this.news = data;
+        },(error) => {
+          this.errorMessage = error;
+          this.cdr.detectChanges();
         })
       }
       this.route.data.subscribe((m:any) => {

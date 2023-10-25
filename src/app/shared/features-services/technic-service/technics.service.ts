@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, catchError, throwError } from 'rxjs';
 import { Technics, TechnicsNews } from '../../interfaces/technology.interface';
 
 
@@ -12,11 +12,15 @@ export class TechnicsService {
   constructor(private http: HttpClient) { }
 
   public getNews():Observable<TechnicsNews[]> {
-    return this.http.get<TechnicsNews[]>(this._url);
+    return this.http.get<TechnicsNews[]>(this._url).pipe(
+      catchError(this.handleError)
+    );
   }
 
   public getSingleTechnicNews(id:number): Observable<TechnicsNews> {
-    return this.http.get<TechnicsNews>(`${this._url}/${id}`);
+    return this.http.get<TechnicsNews>(`${this._url}/${id}`).pipe(
+      catchError(this.handleError)
+    );
   }
 
   public addTechnicNews(news:Technics): Observable<Technics> {
@@ -29,5 +33,18 @@ export class TechnicsService {
 
   public updateTechnicNews(id:number,body:Technics):Observable<Technics> {
     return this.http.patch<Technics>(`${this._url}/${id}`,body)
+  }
+
+  private handleError(error: HttpErrorResponse) {
+    let errorMessage = '';
+    if (error.status === 0) {
+      console.error('An error occurred:', error.error);
+    } else {
+      console.error(
+        `Backend returned code ${error.status}, body was: `, error.error);
+        errorMessage = `Backend returned code ${error.status}, body was: `, error.error;
+    }
+    errorMessage+='Something bad happened; please try again later.';
+    return throwError(() => new Error(errorMessage));
   }
 }
