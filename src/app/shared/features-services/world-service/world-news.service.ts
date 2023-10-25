@@ -18,7 +18,9 @@ export class WorldNewsService {
   }
 
   public getSingleWorldNews(id:number): Observable<WorldNews> {
-    return this.http.get<WorldNews>(`${this._url}/${id}`);
+    return this.http.get<WorldNews>(`${this._url}/${id}`).pipe(
+      catchError(this.handleError)
+    );
   }
 
   public addWorldNews(news:World): Observable<World> {

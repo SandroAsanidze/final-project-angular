@@ -25,6 +25,9 @@ export class SingleNewsComponent {
     private cdr:ChangeDetectorRef
   ){}
   currentPath:string|undefined;
+
+  errorMessage: string='';
+
   ngOnInit(): void {
     const route = this.router.url;
     const segments = route.split('/');
@@ -35,7 +38,11 @@ export class SingleNewsComponent {
       this.worldService.getSingleWorldNews(id).subscribe(data => {
         this.singleNews = data;
         this.cdr.detectChanges();
-      })
+      },
+      (error) => {
+        this.errorMessage = error;
+      }
+      )
     }
 
     if(segments[1] === 'sport') {

@@ -1,3 +1,7 @@
+<div class="error" *ngIf="!singleNews">
+    <h2>Something went wrong...</h2>
+    <h3>{{errorMessage}}</h3>
+</div>
 <div class="news-container" *ngIf="singleNews">
     <button class="back-button" (click)="backToPage()">Back</button>
     <div class="news-content">
