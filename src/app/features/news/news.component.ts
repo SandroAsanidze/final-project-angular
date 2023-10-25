@@ -43,7 +43,6 @@ export class NewsComponent {
         this.news = [];
         this.sportService.getSportsNews().subscribe(data => {
           this.news = data;
-          this.cdr.detectChanges();
         })
 
       }
@@ -52,7 +51,6 @@ export class NewsComponent {
         this.news = [];
         this.technicService.getNews().subscribe(data => {
           this.news = data;
-          this.cdr.detectChanges();
         })
       }
 
@@ -60,7 +58,6 @@ export class NewsComponent {
         this.news = [];
         this.worldService.getWorldNews().subscribe(data => {
           this.news = data;
-          this.cdr.detectChanges();
         })
       }
       this.route.data.subscribe((m:any) => {

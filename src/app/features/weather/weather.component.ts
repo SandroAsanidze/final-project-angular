@@ -41,7 +41,6 @@ export class WeatherComponent implements OnInit {
     }
     this.weatherService.getWeatherData(city).subscribe(data => {
       this.weatherData = data;
-      this.cdr.detectChanges();
     })
   }
 }
