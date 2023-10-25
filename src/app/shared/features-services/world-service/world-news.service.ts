@@ -1,20 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { WorldNews,World } from '../../interfaces/world.interface';
 
-export interface WorldNews {
-  id:number,
-  title: string;
-  description: string;
-  urlToImage: string;
-  content: string;
-}
-export interface World {
-  title: string;
-  description: string;
-  urlToImage: string;
-  content: string;
-}
 
 @Injectable({
   providedIn: 'root'
@@ -43,3 +31,5 @@ export class WorldNewsService {
     return this.http.patch<World>(`${this._url}/${id}`,body)
   }
 }
+export { WorldNews };
+

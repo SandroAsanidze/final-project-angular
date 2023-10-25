@@ -1,7 +1,7 @@
 import { inject } from '@angular/core';
 import { ResolveFn } from '@angular/router';
-import { WorldNewsService } from '../../features-services/world-service/world-news.service';
 import { catchError, of } from 'rxjs';
+import { WorldNewsService } from 'src/app/shared/features-services/world-service/world-news.service';
 
 export const newsResolver: ResolveFn<any> = (route, state,worldService = inject(WorldNewsService)) =>
   worldService.getWorldNews().pipe(

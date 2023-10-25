@@ -6,7 +6,6 @@ import { HeaderComponent } from './features/header/header.component';
 import { FooterComponent } from './features/footer/footer.component';
 import { MainNewsComponent } from './features/main-news/main-news.component';
 import { LoginService } from './features/login/service/login.service';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @Component({
   selector: 'app-root',

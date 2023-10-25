@@ -2,23 +2,13 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { TechnicsService } from '../features-services/technic-service/technics.service';
-import { WorldNewsService, World } from '../features-services/world-service/world-news.service';
-import { SportService } from '../features-services/sport-service/sport.service';
+import { SportService } from 'src/app/shared/features-services/sport-service/sport.service';
+import { WorldNewsService } from 'src/app/shared/features-services/world-service/world-news.service';
+import { TechnicsService } from 'src/app/shared/features-services/technic-service/technics.service';
+import { Sport } from 'src/app/shared/interfaces/sports.interface';
+import { World } from 'src/app/shared/interfaces/world.interface';
+import { CommonInterface } from 'src/app/shared/interfaces/admin-common.interface';
 
-export interface Sport {
-  title: string;
-  description: string;
-  urlToImage: string;
-  content: string;
-}
-
-export interface CommonInterface {
-  title: string;
-  description: string;
-  urlToImage: string;
-  content: string;
-}
 
 @Component({
   selector: 'app-add-news',
@@ -81,3 +71,5 @@ export class AddNewsComponent {
     this.loginForm.reset();
   }
 }
+
+export { CommonInterface };

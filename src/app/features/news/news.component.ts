@@ -1,14 +1,15 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { WorldNews, WorldNewsService } from '../features-services/world-service/world-news.service';
 import { CommonInterface } from '../add-news/add-news.component';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ArticleDataService } from 'src/app/core/services/article-data.service';
-import { TechnicsNews, TechnicsService } from '../features-services/technic-service/technics.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { ForupdateComponent } from '../forupdate/forupdate.component';
-import { SportService, SportsNews } from '../features-services/sport-service/sport.service';
+import { TechnicsService } from 'src/app/shared/features-services/technic-service/technics.service';
+import { SportService } from 'src/app/shared/features-services/sport-service/sport.service';
+import { WorldNews, WorldNewsService } from 'src/app/shared/features-services/world-service/world-news.service';
+import { SportsNews } from 'src/app/shared/interfaces/sports.interface';
 
 @Component({
   selector: 'app-news',

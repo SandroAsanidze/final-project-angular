@@ -1,20 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-export interface TechnicsNews {
-  id: number;
-  title: string;
-  description: string;
-  urlToImage: string;
-  content: string;
-}
+import { Technics, TechnicsNews } from '../../interfaces/technology.interface';
 
-export interface Technics {
-  title: string;
-  description: string;
-  urlToImage: string;
-  content: string;
-}
 
 @Injectable({
   providedIn: 'root'

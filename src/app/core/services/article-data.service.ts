@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CommonInterface } from 'src/app/features/add-news/add-news.component';
+import { CommonInterface } from 'src/app/shared/interfaces/admin-common.interface';
 
 @Injectable({
   providedIn: 'root'

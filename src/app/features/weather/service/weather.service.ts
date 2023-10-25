@@ -1,23 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Weather } from 'src/app/shared/interfaces/weather.interface';
 
-export interface Weather {
-  main: {
-    humidity:number;
-    temp:number;
-  };
-  name:string;
-  weather:[
-    {
-      description:string;
-      main:string;
-    }
-  ];
-  wind: {
-    speed:number;
-  };
-}
 
 @Injectable({
   providedIn: 'root'

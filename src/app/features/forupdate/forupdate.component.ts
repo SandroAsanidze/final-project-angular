@@ -1,11 +1,11 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { WorldNewsService } from '../features-services/world-service/world-news.service';
 import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { TechnicsService } from '../features-services/technic-service/technics.service';
 import { ActivatedRoute } from '@angular/router';
 import { ArticleDataService } from 'src/app/core/services/article-data.service';
-import { SportService } from '../features-services/sport-service/sport.service';
+import { TechnicsService } from 'src/app/shared/features-services/technic-service/technics.service';
+import { SportService } from 'src/app/shared/features-services/sport-service/sport.service';
+import { WorldNewsService } from 'src/app/shared/features-services/world-service/world-news.service';
 
 @Component({
   selector: 'app-forupdate',

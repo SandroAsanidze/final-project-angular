@@ -1,15 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Sport } from '../../add-news/add-news.component';
-
-export interface SportsNews {
-  id: number;
-  title: string;
-  description: string;
-  urlToImage: string;
-  content: string;
-}
+import { Sport, SportsNews } from '../../interfaces/sports.interface';
 
 @Injectable({
   providedIn: 'root'

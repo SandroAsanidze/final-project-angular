@@ -1,11 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { AdminInfo } from 'src/app/shared/interfaces/admin-common.interface';
 
-interface AdminInfo {
-  email:string,
-  password:string
-}
 
 @Injectable({
   providedIn: 'root'
