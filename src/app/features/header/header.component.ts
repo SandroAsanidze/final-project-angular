@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component,OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { LoginComponent } from '../login/login.component';
-import { LoaderService } from './loader/loader.service';
+import { LoaderService } from '../../shared/loader/loader.service';
 
 @Component({
   selector: 'app-header',

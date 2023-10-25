@@ -26,7 +26,6 @@ export class ForupdateComponent implements OnInit {
     
     ngOnInit(): void {
       this.selectedNews = this.articleDataService.getSelectedArticle();
-      
     }
 
   selectedNews:any;

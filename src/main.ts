@@ -4,7 +4,7 @@ import {provideRouter } from '@angular/router';
 import { ROUTE } from './app/app.route';
 import { importProvidersFrom } from '@angular/core';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { LoaderInterceptor } from './app/features/header/loader/interceptor/interceptor.service';
+import { LoaderInterceptor } from './app/core/interceptor/interceptor.service';
 
 bootstrapApplication(AppComponent,{
   providers: [

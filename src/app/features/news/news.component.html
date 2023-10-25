@@ -27,6 +27,6 @@
         <li><a (click)="currentPage = page" [class.active]="currentPage === page" (click)="scrollToTop()">{{page}}</a></li>
     </ul>
 </div>
-<div *ngIf="this.articleDataService.showForm">
+<div *ngIf="this.articleDataService.showForm" class="pop-up">
     <app-forupdate></app-forupdate>
 </div>

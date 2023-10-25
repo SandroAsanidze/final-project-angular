@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CommonInterface } from '../add-news/add-news.component';
 import { FormBuilder, Validators } from '@angular/forms';
@@ -21,6 +21,20 @@ import { SportsNews } from 'src/app/shared/interfaces/sports.interface';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NewsComponent {
+  @HostListener('document:click',['$event'])
+  onClick(event:any){
+    const el = document.querySelector('.pop-up');
+    const ed = document.querySelector('.edit');
+    
+    if((event.target as HTMLElement).classList.contains('edit')) {
+      this.articleDataService.changeShowForm(true);
+    }
+    else {
+      if(el && !el.contains(event.target as Node) && this.articleDataService.showForm) {
+        this.articleDataService.changeShowForm(false);
+      }
+    }
+  }
   constructor(
     private route: ActivatedRoute,
     private worldService:WorldNewsService,
