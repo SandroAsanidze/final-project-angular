@@ -1,10 +1,10 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { CommonInterface } from '../../add-news/add-news.component';
 import { WorldNewsService } from 'src/app/shared/features-services/world-service/world-news.service';
 import { TechnicsService } from 'src/app/shared/features-services/technic-service/technics.service';
 import { SportService } from 'src/app/shared/features-services/sport-service/sport.service';
+import { CommonInterface } from 'src/app/shared/interfaces/admin-common.interface';
 
 @Component({
   selector: 'app-single-news',

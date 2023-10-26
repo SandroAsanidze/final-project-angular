@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CommonInterface } from '../add-news/add-news.component';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ArticleDataService } from 'src/app/core/services/article-data.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -11,6 +10,7 @@ import { SportService } from 'src/app/shared/features-services/sport-service/spo
 import { WorldNewsService } from 'src/app/shared/features-services/world-service/world-news.service';
 import { SportsNews } from 'src/app/shared/interfaces/sports.interface';
 import { WorldNews } from 'src/app/shared/interfaces/world.interface';
+import { CommonInterface } from 'src/app/shared/interfaces/admin-common.interface';
 
 @Component({
   selector: 'app-news',

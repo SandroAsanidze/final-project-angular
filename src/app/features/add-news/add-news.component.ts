@@ -7,6 +7,7 @@ import { WorldNewsService } from 'src/app/shared/features-services/world-service
 import { TechnicsService } from 'src/app/shared/features-services/technic-service/technics.service';
 import { Sport } from 'src/app/shared/interfaces/sports.interface';
 import { World } from 'src/app/shared/interfaces/world.interface';
+import { Technics } from 'src/app/shared/interfaces/technology.interface';
 import { CommonInterface } from 'src/app/shared/interfaces/admin-common.interface';
 
 
@@ -29,7 +30,7 @@ export class AddNewsComponent {
     this.sportsService.addNews(news).subscribe();
   }
 
-  public addTechnicsNews(news:Sport) {
+  public addTechnicsNews(news:Technics) {
     this.technicsService.addTechnicNews(news).subscribe();
   }
 
@@ -71,5 +72,3 @@ export class AddNewsComponent {
     this.loginForm.reset();
   }
 }
-
-export { CommonInterface };
