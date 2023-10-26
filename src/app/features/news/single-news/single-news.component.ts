@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { WorldNewsService } from 'src/app/shared/features-services/world-service/world-news.service';
 import { TechnicsService } from 'src/app/shared/features-services/technic-service/technics.service';
 import { SportService } from 'src/app/shared/features-services/sport-service/sport.service';
@@ -9,7 +9,8 @@ import { CommonInterface } from 'src/app/shared/interfaces/admin-common.interfac
 @Component({
   selector: 'app-single-news',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,RouterModule],
+  providers:[WorldNewsService,TechnicsService,SportService],
   templateUrl: './single-news.component.html',
   styleUrls: ['./single-news.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

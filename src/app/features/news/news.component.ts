@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormBuilder, Validators } from '@angular/forms';
 import { ArticleDataService } from 'src/app/core/services/article-data.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
@@ -42,7 +41,6 @@ export class NewsComponent {
     private router:Router,
     private sportService:SportService,
     public cdr:ChangeDetectorRef,
-    private formBuilder:FormBuilder,
     public articleDataService:ArticleDataService
   ){}
   news: SportsNews[]=[];
@@ -189,11 +187,4 @@ export class NewsComponent {
     this.articleDataService.addSelectedArticle(article);
     this.articleDataService.changeShowForm(!this.articleDataService.showForm);
   }
-
-  public updateForm = this.formBuilder.group({
-    title:['',Validators.required],
-    description:['',Validators.required],
-    urlToImage:['',[Validators.required,Validators.pattern(/https?:\/\/\S+\.(?:jpg|jpeg|png|gif|bmp|svg|webp)/i)]],
-    content:['',Validators.required],
-  })
 }

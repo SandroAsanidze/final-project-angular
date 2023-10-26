@@ -3,19 +3,20 @@ import { CommonModule } from '@angular/common';
 import { WeatherService } from './service/weather.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { Weather } from 'src/app/shared/interfaces/weather.interface';
 
 @Component({
   selector: 'app-weather',
   standalone: true,
-  imports: [CommonModule,HttpClientModule,FormsModule],
+  imports: [CommonModule,HttpClientModule,FormsModule,RouterModule],
   providers:[WeatherService],
   templateUrl: './weather.component.html',
   styleUrls: ['./weather.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class WeatherComponent implements OnInit {
-  weatherData:any;
+  weatherData: Weather | undefined;
   city:string='tbilisi'
   today : Date = new Date();
   errorMessage:string='';
