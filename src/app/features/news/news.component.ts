@@ -25,7 +25,6 @@ export class NewsComponent {
   @HostListener('document:click',['$event'])
   onClick(event:any){
     const el = document.querySelector('.pop-up');
-    const ed = document.querySelector('.edit');
     
     if((event.target as HTMLElement).classList.contains('edit')) {
       this.articleDataService.changeShowForm(true);
@@ -49,6 +48,10 @@ export class NewsComponent {
   news: SportsNews[]=[];
   currentPath:string | undefined;
   errorMessage:string='';
+
+  goToHome() {
+    this.router.navigate(['home'])
+  }
 
   ngOnInit(): void {
       let currentRoute = this.route.snapshot.routeConfig?.path;

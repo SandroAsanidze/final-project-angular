@@ -12,6 +12,13 @@
   background-color: #f6f8fc;
   color: rgb(255, 0, 0);
   font-size: 30px;
+  .back-to {
+    a {
+        color: blue;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
 }
 .weather-div {
     font-family: 'Poppins', sans-serif;

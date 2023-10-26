@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { WeatherService } from './service/weather.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-weather',
@@ -23,7 +23,8 @@ export class WeatherComponent implements OnInit {
   constructor(
     private activatedRoute:ActivatedRoute,
     private cdr:ChangeDetectorRef,
-    private weatherService:WeatherService
+    private weatherService:WeatherService,
+    private router:Router
   ){}
   ngOnInit(): void {
     this.getWeather(this.city);
@@ -42,8 +43,13 @@ export class WeatherComponent implements OnInit {
     }
     this.weatherService.getWeatherData(city).subscribe(data => {
       this.weatherData = data;
+      this.cdr.detectChanges();
     },(error) => {
       this.errorMessage = error;
     })
+  }
+
+  backToHome(){
+    this.router.navigate(['home'])
   }
 }

@@ -28,6 +28,10 @@ export class SingleNewsComponent {
 
   errorMessage: string='';
 
+  goToHome() {
+    this.router.navigate(['home'])
+  }
+
   ngOnInit(): void {
     const route = this.router.url;
     const segments = route.split('/');

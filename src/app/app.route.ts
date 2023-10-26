@@ -63,4 +63,8 @@ export const ROUTE:Route[] = [
         loadComponent: () => import('./features/add-news/add-news.component').then(c => c.AddNewsComponent),
         canActivate:[authGuard]
     },
+    {
+        path:'**',
+        loadComponent: () => import('./features/error/error.component').then(c => c.ErrorComponent)
+    }
 ];

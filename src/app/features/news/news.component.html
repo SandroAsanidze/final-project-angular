@@ -5,6 +5,7 @@
 <div class="error" *ngIf="errorMessage">
     <h2>Something went wrong...</h2>
     <h3>{{errorMessage}}</h3>
+    <h2 class="back-to">Go Back To <a (click)="goToHome()">News Portal</a></h2>
 </div>
 <div class="articles">
     <div class="article" *ngFor="let news of onePageData()">

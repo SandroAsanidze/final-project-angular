@@ -21,15 +21,9 @@ export class AppComponent implements OnInit {
   hideMainNews:boolean = false;
 
   ngOnInit() {
-    let currentRoute = this.route.snapshot.routeConfig?.path;
-  
-    if(currentRoute === 'login'){
-      this.loginService.hideEverything = !this.loginService.hideEverything;
-    }
-
     this.router.events.subscribe(() => {
       const currentPath = this.router.url;
-
+      
       if(currentPath === '/login') {
         this.loginService.hideEverything = true;
       }
@@ -46,6 +40,22 @@ export class AppComponent implements OnInit {
       }
       else {
         this.hideMainNews = true
+      }
+      
+      if (
+        currentPath !== '/add-news' &&
+        currentPath !== '/sport' &&
+        currentPath !== '/login' &&
+        currentPath !== '/world' &&
+        currentPath !== '/technology' &&
+        currentPath !== '/weather' &&
+        currentPath !== '/home' &&
+        currentPath !== `/world/${id}` &&
+        currentPath !== `/sport/${id}` &&
+        currentPath !== `/technology/${id}`
+      ) {
+        this.loginService.hideEverything = true;
+        this.hideMainNews = false;
       }
   });
 }

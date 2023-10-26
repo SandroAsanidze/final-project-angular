@@ -1,6 +1,7 @@
 <div class="error" *ngIf="errorMessage">
     <h2>Something went wrong...</h2>
     <h3>{{errorMessage}}</h3>
+    <h2 class="back-to"><a (click)="backToHome()">Go Back</a></h2>
 </div>
 <div class="weather-div">
     <div class="box"></div>
