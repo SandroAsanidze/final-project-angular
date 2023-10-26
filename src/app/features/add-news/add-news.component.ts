@@ -38,7 +38,7 @@ export class AddNewsComponent {
   }
 
   public loginForm = this.formBuilder.group({
-    category:['sports',Validators.required],
+    category:['sport',Validators.required],
     title:['',Validators.required],
     description:['',Validators.required],
     urlToImage:['',[Validators.required,Validators.pattern(/https?:\/\/\S+\.(?:jpg|jpeg|png|gif|bmp|svg|webp)/i)]],
@@ -58,10 +58,10 @@ export class AddNewsComponent {
       content: this.loginForm.get('content')?.value || ''
     };
 
-    if(category === 'sports') {
+    if(category === 'sport') {
       this.addSportsNews(formData);
     }
-    else if (category === 'worlds') {
+    else if (category === 'world') {
       this.addWorldsNews(formData);
     }
     else {

@@ -55,7 +55,7 @@ export class ForupdateComponent implements OnInit {
         this.worldService.updateWorldNews(id, this.selectedNews).subscribe();
       });
     }
-    else if (currentRoute === 'technic') {
+    else if (currentRoute === 'technology') {
       this.technicService.getSingleTechnicNews(id).subscribe(() => {
         this.technicService.updateTechnicNews(id, this.selectedNews).subscribe();
       });
