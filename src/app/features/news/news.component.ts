@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ArticleDataService } from 'src/app/core/services/article-data.service';
+import { ArticleDataService } from 'src/app/shared/features-services/article-service/article-data.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { ForupdateComponent } from '../forupdate/forupdate.component';

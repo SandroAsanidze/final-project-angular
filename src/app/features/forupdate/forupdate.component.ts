@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { ArticleDataService } from 'src/app/core/services/article-data.service';
+import { ArticleDataService } from 'src/app/shared/features-services/article-service/article-data.service';
 import { TechnicsService } from 'src/app/shared/features-services/technic-service/technics.service';
 import { SportService } from 'src/app/shared/features-services/sport-service/sport.service';
 import { WorldNewsService } from 'src/app/shared/features-services/world-service/world-news.service';
