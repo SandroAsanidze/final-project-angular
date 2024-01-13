@@ -65,3 +65,29 @@
         
     }
 }
+
+@media (max-width:520px) {
+    .form-div {
+        width: 80%;
+        .form {
+            .label {
+                textarea {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:380px) {
+    .form-div {
+        width: 90%;
+        .form {
+            .label {
+                textarea {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

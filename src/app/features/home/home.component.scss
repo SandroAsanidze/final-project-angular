@@ -4,7 +4,6 @@
     flex-direction: column;
     margin: 0 auto;
     margin-top: 130px;
-    margin-left: 300px;
     width: 769px;
     .first-div {
         display: flex;
@@ -43,9 +42,9 @@
     }
 }
 
-@media (max-width:1480px) {
+@media (max-width:800px) {
     .home-div {
-        margin-left: 110px;
-        width: 80%;
+        width: 100%;
+        text-align: center;
     }
 }

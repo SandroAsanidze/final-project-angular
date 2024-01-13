@@ -1,5 +1,6 @@
 .main {
     display: flex;
+    justify-content: space-around;
     background-color: #f6f8fc;
     .scrollToTop {
         position: fixed;
@@ -16,5 +17,11 @@
           padding: 7px;
         }
       }
-      
 }
+
+@media (max-width:1200px) {
+  .main {
+    flex-direction: column;
+  }
+}
+
