@@ -7,7 +7,7 @@
     justify-content: center;
     .footer-ul {
         list-style: none;
-        width: 40%;
+        width: 60%;
         display: flex;
         justify-content: space-around;
         color: #FFFFFF;
@@ -23,10 +23,55 @@
     align-items: center;
     justify-content: center;
     color: #FFFFFF;
+    p {
+        text-align: center;
+    }
     .supporters {
         list-style: none;
         display: flex;
         justify-content: space-around;
         width: 40%;
+    }
+}
+
+@media (max-width:770px) {
+    .footer-div {
+        width: 100%;
+        .footer-ul {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-div {
+        .footer-ul {
+            width: 100%;
+        }
+    }
+    .footer-div-2 {
+        p {
+            width: 100%;
+        }
+        .supporters {
+            display: none;
+        }
+    }
+}
+
+
+@media (max-width:500px) {
+    .footer-div {
+        .footer-ul {
+            margin-left: -40px;
+        }
+    }
+}
+
+@media (max-width:460px) {
+    .footer-div {
+        .footer-ul {
+            display: none;
+        }
     }
 }

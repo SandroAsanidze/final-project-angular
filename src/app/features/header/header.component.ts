@@ -19,6 +19,8 @@ export class HeaderComponent implements OnInit{
     this.Admin();
   }
 
+  isExpanded$: boolean = false;
+
   Admin() {
     if(localStorage.getItem('isAdmin') === 'true') {
       return true;
@@ -37,4 +39,8 @@ export class HeaderComponent implements OnInit{
   }
 
   today : Date = new Date();
+
+  open() {
+    this.isExpanded$ = !this.isExpanded$;
+  }
 }

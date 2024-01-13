@@ -13,27 +13,29 @@
         </div>
         <div class="nav-login">
             <nav class="navigation">
-                <ul class="nav-ul">
+                <ul class="nav-ul" [ngClass]="{'sidebar': isExpanded$ === true }">
                     <li>
-                        <a routerLinkActive="activee"  class="nav-li" routerLink="home">Home</a>
+                        <a (click)="open()" routerLinkActive="activee"  class="nav-li" routerLink="home">Home</a>
                     </li>
                     <li>
-                        <a routerLinkActive="active" class="nav-li" routerLink="world">World</a>
+                        <a (click)="open()" routerLinkActive="active" class="nav-li" routerLink="world">World</a>
                     </li>
                     <li>
-                        <a routerLinkActive="active" class="nav-li" routerLink="technology">Technology</a>
+                        <a (click)="open()" routerLinkActive="active" class="nav-li" routerLink="technology">Technology</a>
                     </li>
                     <li>
-                        <a routerLinkActive="active" class="nav-li" routerLink="sport">Sports</a>
+                        <a (click)="open()" routerLinkActive="active" class="nav-li" routerLink="sport">Sports</a>
                     </li>
                     <li>
-                        <a routerLinkActive="active" class="nav-li" routerLink="weather">Weather</a>
+                        <a (click)="open()" routerLinkActive="active" class="nav-li" routerLink="weather">Weather</a>
                     </li>
                     <li [hidden]="!Admin()">
-                        <a routerLinkActive="active" class="nav-li" routerLink="add-news">Add</a>
+                        <a (click)="open()" routerLinkActive="active" class="nav-li" routerLink="add-news">Add</a>
                     </li>
                 </ul>
             </nav>
+            <div class="navBar" (click)="open()"><i class="fa-solid fa-bars-staggered"></i></div>
+            <div *ngIf="isExpanded$" class="closeBar" (click)="open()"><i class="fa-solid fa-xmark"></i></div>
             <div class="login">
                 <img [hidden]="Admin()" routerLink="login" class="login-svg" src="../../../assets/user-solid.svg" alt="login-svg">
                 <p class="log-out" [hidden]="!Admin()" (click)="logOut()">Log Out</p>
